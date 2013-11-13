@@ -12,12 +12,17 @@
  */
 
 global $is_resume_page;
-if (isset($_REQUEST['prn'])) {
+if (isset($_REQUEST['prn'])) 
+{
 	get_template_part('template', 'print');
-} else if (get_theme_option("homepage") == 'blog' && !isset($_REQUEST['cv'])) {
+} 
+else if (get_theme_option("homepage") == 'blog' && !isset($_REQUEST['cv'])) 
+{
 	$is_resume_page = false;
 	get_template_part('template', 'blog');
-} else {
+} 
+else 
+{
 	$is_resume_page = true;
 	get_template_part('template', 'resume');
 }
