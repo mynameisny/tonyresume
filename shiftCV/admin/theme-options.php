@@ -15,7 +15,7 @@ function theme_options_add_admin() {
 	//$tt_page = add_menu_page('Theme Options', 'Theme Options', 'edit_theme_options', 'theme_options', 'theme_options_page');
 
 	// In this case menu item "Theme Options" add in admin menu 'Appearance'
-	$tt_page = add_theme_page('Theme Options', 'Theme Options', 'edit_theme_options', 'theme_options', 'theme_options_page');
+	$tt_page = add_theme_page('主题选项', '主题选项', 'edit_theme_options', 'theme_options', 'theme_options_page');
 
 	add_action("admin_print_styles-$tt_page", 'theme_options_load_styles');
 	add_action("admin_print_scripts-$tt_page", 'theme_options_load_scripts');
@@ -57,7 +57,8 @@ add_action('admin_head', 'theme_options_admin_head');
 /*-----------------------------------------------------------------------------------*/
 /* Prepare javascripts for Options Page
 /*-----------------------------------------------------------------------------------*/
-function theme_options_admin_head() { 
+function theme_options_admin_head() 
+{ 
 	$ajax_nonce = wp_create_nonce('ajax_nonce');
 	$ajax_url = admin_url('admin-ajax.php');
 	if (UPLOADER == UPLOADER_WP) $upload_url = admin_url('media-upload.php');
@@ -106,23 +107,29 @@ function theme_options_admin_head() {
             ?>
         });
 
-		jQuery(document).ready(function(){
+		jQuery(document).ready(function()
+		{
 			var i = 0;
-			jQuery('#of-nav li a').attr('id', function() {
+			jQuery('#of-nav li a').attr('id', function() 
+			{
 			   i++;
 			   return 'item'+i;
 			});
 	
 			var flip = 0;
 					
-			jQuery('#expand_options').click(function(){
-				if(flip == 0){
+			jQuery('#expand_options').click(function()
+			{
+				if(flip == 0)
+				{
 					flip = 1;
 					jQuery('#truethemes_container #of-nav').hide();
 					jQuery('#truethemes_container #content').width(755);
 					jQuery('#truethemes_container .group').add('#truethemes_container .group h2').show();
 					jQuery(this).text('[-]');
-				} else {
+				} 
+				else
+				{
 					flip = 0;
 					jQuery('#truethemes_container #of-nav').show();
 					jQuery('#truethemes_container #content').width(579);
@@ -400,7 +407,8 @@ function theme_options_admin_head() {
 /*-----------------------------------------------------------------------------------*/
 /* Build the Options Page
 /*-----------------------------------------------------------------------------------*/
-function theme_options_page(){
+function theme_options_page()
+{
 ?>
 <div class="wrap" id="truethemes_container">
 	<div id="of-popup-save" class="of-save-popup">
@@ -412,7 +420,7 @@ function theme_options_page(){
 	<form action="" enctype="multipart/form-data" id="ofform">
 		<div id="header">
 			<div class="logo">
-				<h2>Theme Options</h2>
+				<h2>主题选项</h2>
 			</div>
 			<div class="icon-option"> </div>
 			<div class="clear"></div>
@@ -448,7 +456,8 @@ function theme_options_page(){
 /* Theme options page renderer
 /*-----------------------------------------------------------------------------------*/
 
-function theme_options_render() {
+function theme_options_render()
+{
     
 	global $theme_options;
 
@@ -456,13 +465,19 @@ function theme_options_render() {
 	$menu = '';
 	$output = '';
 	
-	foreach ($theme_options as $value) {
+	foreach ($theme_options as $value) 
+	{
 	   
 		$counter++;
 		$val = '';
 		//Start Heading
-		if ( !in_array( $value['type'], array("heading", "hidden") ) ) { 
-			$class = ''; if(isset( $value['class'] )) { $class = $value['class']; }
+		if ( !in_array( $value['type'], array("heading", "hidden") ) ) 
+		{ 
+			$class = ''; 
+			if(isset( $value['class'] ))
+			{
+				$class = $value['class'];
+			}
 			$output .= '<div class="section section-'.str_replace(array('list', 'range'), array('select', 'select'), $value['type']).' '. $class .'">'."\n";
 			$output .= '<h3 class="heading">'. $value['name'] .'</h3>'."\n";
 			$output .= '<div class="option">'."\n" . '<div class="controls">'."\n";
@@ -470,189 +485,134 @@ function theme_options_render() {
 		//End Heading
 		
 
-		switch ( $value['type'] ) {
-		
-		
-		
-		case 'hidden':
-			$output .= '<input class="of-input" name="'. $value['id'] .'" id="'. $value['id'] .'" type="'. $value['type'] .'" value="'. htmlspecialchars($value['val']) . '" />';
-		break;
-		
-		
-		
-		case 'text':
-			$output .= '<input class="of-input" name="'. $value['id'] .'" id="'. $value['id'] .'" type="'. $value['type'] .'" value="'. htmlspecialchars($value['val']) . '" />';
-		break;
-		
-		
-		
-		
-		
-		
-		case 'select':
-			$output .= '<select class="of-input" name="'. $value['id'] .'" id="'. $value['id'] .'">';
-			foreach ($value['options'] as $k => $option) {
-				$output .= '<option'. ($value['val'] == $k ? ' selected="selected"' : '') . ' value="' . $k . '">' . htmlspecialchars($option) . '</option>';
-			}
-			$output .= '</select>';
-		break;
-		
-		
-		
-		
-		
-		case 'list':
-			$output .= '<select class="of-input" name="'. $value['id'] .'" id="'. $value['id'] .'">';
-			foreach ($value['options'] as $option) {
-				$output .= '<option'. ($value['val'] == $option ? ' selected="selected"' : '') . ' value="' . $option . '">' . htmlspecialchars($option) . '</option>';
-			}
-			$output .= '</select>';
-		break;
-
-
-
-		
-		case 'range':
-			$output .= '<select class="of-input" name="'. $value['id'].'" id="'.$value['id'].'">';
-			for ($i = $value['from']; $i <= $value['to']; $i++) { 
-				$output .= '<option value="'. $i .'" ' . ($value['val'] == $i ? ' selected="selected"' : '') . '>'. $i .'</option>'; 
-			}
-			$output .= '</select>';
-		break;
-		
-
-
-		
-		
-		case 'fontsize':
-			$output .= '<select class="of-typography of-typography-size" name="'. $value['id'].'" id="'. $value['id'].'_size">';
-			for ($i = 9; $i < 71; $i++) { 
-				$output .= '<option value="'. $i .'" ' . ($value['val'] == $i ? ' selected="selected"' : '') . '>'. $i .'px</option>'; 
-			}
-			$output .= '</select>';
-		break;
-		
-		
-		
-		
-		
-		
-		
-		
-		case 'textarea':
-			$cols = isset($value['cols']) && $value['cols'] > 10 ? $value['cols'] : '40';
-			$rows = isset($value['cols']) && $value['rows'] > 1 ? $value['rows'] : '8';
-			$output .= '<textarea class="of-input" name="'. $value['id'] .'" id="'. $value['id'] .'" cols="'. $cols .'" rows="' . $rows . '">' . htmlspecialchars($value['val']) . '</textarea>';
-		break;
-		
-		
-		
-		
-		
-		
-		
-		
-		case "radio":
-			foreach ($value['options'] as $key => $option) { 
-				$output .= '<input class="of-input of-radio" type="radio" name="'. $value['id'] .'" value="'. $key .'" '. ($value['val'] == $key ? ' checked="checked"' : '') .' id="' . $value['id'] . '_' . $key . '" /><label for="' . $value['id'] . '_' . $key . '">' . $option . '</label>' . (isset($value['style']) && $value['style']=='vertical' ? '<br />' : '');
-			}
-		break;
-		
-		
-		
-		
-		
-		
-		
-		
-		case "checkbox": 
-			$output .= '<input type="checkbox" class="checkbox of-input" name="'.  $value['id'] .'" id="'. $value['id'] .'" value="true" ' . ($value['val'] == 'true' ? ' checked="checked"' : '') .' /><label for="' . $value['id'] . '">' . $value['name'] . '</label>';
-		break;
-	
-		
-		
-		
-		
-		
-		
-		case "upload":
-			$output .= theme_options_uploader_function($value['id'], $value['val'], null);
-		break;
-		
-		
-		
-		
-		
-		
-		
-		case "upload_min":
-			$output .= theme_options_uploader_function($value['id'], $value['val'], 'min');
-		break;
-
-
-
-
-
-
-		case "color":
-			$output .= '<div id="' . $value['id'] . '_picker" class="colorSelector"><div></div></div>';
-			$output .= '<input class="of-color" name="'. $value['id'] .'" id="'. $value['id'] .'" type="text" value="'. $value['val'] .'" />';
-		break;   
-		
-		
-		
-		
-		 
-		
-		case "images":
-			$i = 0;
-			foreach ($value['options'] as $key => $option) { 
-				$i++;
-				$checked = '';
-				$selected = '';
-				if ($value['val'] == $key || ($i == 1  && $value['val'] == '')) { $checked = ' checked'; $selected = 'of-radio-img-selected'; }
-				$output .= '<span>';
-				$output .= '<input type="radio" id="of-radio-img-' . $value['id'] . $i . '" class="checkbox of-radio-img-radio" value="'.$key.'" name="'. $value['id'].'" '.$checked.' />';
-				$output .= '<div class="of-radio-img-label">'. $key .'</div>';
-				$output .= '<img src="'.$option.'" alt="" class="of-radio-img-img '. $selected .'" onClick="document.getElementById(\'of-radio-img-'. $value['id'] . $i.'\').checked = true;" />';
-				$output .= '</span>';
-			}
-		break; 
-		
-		
-		
-		
-		
-		
-		
-		
-		case "info":
-			$default = $value['std'];
-			$output .= $default;
-		break;
-		
-		
-		
-		
-	
-	                                 
-		
-		case "heading":
-			if ($counter >= 2){
-			   $output .= '</div>'."\n";
-			}
-			$jquery_click_hook = ereg_replace("[^A-Za-z0-9]", "", my_strtolower($value['name']) );
-			$jquery_click_hook = "of-option-" . $jquery_click_hook;
-			$menu .= '<li><a title="'.  $value['name'] .'" href="#'.  $jquery_click_hook  .'">'.  $value['name'] .'</a></li>';
-			$output .= '<div class="group" id="'. $jquery_click_hook  .'"><h2>'.$value['name'].'</h2>'."\n";
-		break;                                  
+		switch ( $value['type'] ) 
+		{
+			case 'hidden':
+				$output .= '<input class="of-input" name="'. $value['id'] .'" id="'. $value['id'] .'" type="'. $value['type'] .'" value="'. htmlspecialchars($value['val']) . '" />';
+			break;
+			
+			case 'text':
+				$output .= '<input class="of-input" name="'. $value['id'] .'" id="'. $value['id'] .'" type="'. $value['type'] .'" value="'. htmlspecialchars($value['val']) . '" />';
+			break;
+			
+			case 'select':
+				$output .= '<select class="of-input" name="'. $value['id'] .'" id="'. $value['id'] .'">';
+				foreach ($value['options'] as $k => $option) 
+				{
+					$output .= '<option'. ($value['val'] == $k ? ' selected="selected"' : '') . ' value="' . $k . '">' . htmlspecialchars($option) . '</option>';
+				}
+				$output .= '</select>';
+			break;
+			
+			case 'list':
+				$output .= '<select class="of-input" name="'. $value['id'] .'" id="'. $value['id'] .'">';
+				foreach ($value['options'] as $option)
+				{
+					$output .= '<option'. ($value['val'] == $option ? ' selected="selected"' : '') . ' value="' . $option . '">' . htmlspecialchars($option) . '</option>';
+				}
+				$output .= '</select>';
+			break;
+			
+			case 'range':
+				$output .= '<select class="of-input" name="'. $value['id'].'" id="'.$value['id'].'">';
+				for ($i = $value['from']; $i <= $value['to']; $i++)
+				{ 
+					$output .= '<option value="'. $i .'" ' . ($value['val'] == $i ? ' selected="selected"' : '') . '>'. $i .'</option>'; 
+				}
+				$output .= '</select>';
+			break;
+			
+			case 'fontsize':
+				$output .= '<select class="of-typography of-typography-size" name="'. $value['id'].'" id="'. $value['id'].'_size">';
+				for ($i = 9; $i < 71; $i++)
+				{ 
+					$output .= '<option value="'. $i .'" ' . ($value['val'] == $i ? ' selected="selected"' : '') . '>'. $i .'px</option>'; 
+				}
+				$output .= '</select>';
+			break;
+			
+			case 'textarea':
+				$cols = isset($value['cols']) && $value['cols'] > 10 ? $value['cols'] : '40';
+				$rows = isset($value['cols']) && $value['rows'] > 1 ? $value['rows'] : '8';
+				$output .= '<textarea class="of-input" name="'. $value['id'] .'" id="'. $value['id'] .'" cols="'. $cols .'" rows="' . $rows . '">' . htmlspecialchars($value['val']) . '</textarea>';
+			break;
+			
+			case "radio":
+				foreach ($value['options'] as $key => $option)
+				{ 
+					$output .= '<input class="of-input of-radio" type="radio" name="'. $value['id'] .'" value="'. $key .'" '. ($value['val'] == $key ? ' checked="checked"' : '') .' id="' . $value['id'] . '_' . $key . '" /><label for="' . $value['id'] . '_' . $key . '">' . $option . '</label>' . (isset($value['style']) && $value['style']=='vertical' ? '<br />' : '');
+				}
+			break;
+			
+			case "checkbox": 
+				$output .= '<input type="checkbox" class="checkbox of-input" name="'.  $value['id'] .'" id="'. $value['id'] .'" value="true" ' . ($value['val'] == 'true' ? ' checked="checked"' : '') .' /><label for="' . $value['id'] . '">' . $value['name'] . '</label>';
+			break;
+			
+			case "upload":
+				$output .= theme_options_uploader_function($value['id'], $value['val'], null);
+			break;
+			
+			case "upload_min":
+				$output .= theme_options_uploader_function($value['id'], $value['val'], 'min');
+			break;
+			
+			case "color":
+				$output .= '<div id="' . $value['id'] . '_picker" class="colorSelector"><div></div></div>';
+				$output .= '<input class="of-color" name="'. $value['id'] .'" id="'. $value['id'] .'" type="text" value="'. $value['val'] .'" />';
+			break;   
+			
+			case "images":
+				$i = 0;
+				foreach ($value['options'] as $key => $option)
+				{ 
+					$i++;
+					$checked = '';
+					$selected = '';
+					if ($value['val'] == $key || ($i == 1  && $value['val'] == '')) { $checked = ' checked'; $selected = 'of-radio-img-selected'; }
+					$output .= '<span>';
+					$output .= '<input type="radio" id="of-radio-img-' . $value['id'] . $i . '" class="checkbox of-radio-img-radio" value="'.$key.'" name="'. $value['id'].'" '.$checked.' />';
+					$output .= '<div class="of-radio-img-label">'. $key .'</div>';
+					$output .= '<img src="'.$option.'" alt="" class="of-radio-img-img '. $selected .'" onClick="document.getElementById(\'of-radio-img-'. $value['id'] . $i.'\').checked = true;" />';
+					$output .= '</span>';
+				}
+			break;
+			
+			case "info":
+				$default = $value['std'];
+				$output .= $default;
+			break;
+			
+			case "heading":
+				if ($counter >= 2)
+				{
+				   $output .= '</div>'."\n";
+				}
+				/*
+				$jquery_click_hook = ereg_replace("[^A-Za-z0-9]", "", my_strtolower($value['name']) );
+				$jquery_click_hook = "of-option-" . $jquery_click_hook;
+				$menu .= '<li><a title="'.  $value['name'] .'" href="#'.  $jquery_click_hook  .'">'.  $value['name'] .'</a></li>';
+				$output .= '<div class="group" id="'. $jquery_click_hook  .'"><h2>'.$value['name'].'</h2>'."\n";
+				*/
+				// 解决中文国际化无法切换标签的Bug。
+				$jquery_click_hook = ereg_replace("[^A-Za-z0-9]", "", my_strtolower($value['id']) );
+				$jquery_click_hook = "of-option-" . $jquery_click_hook;
+				$menu .= '<li><a title="'.  $value['id'] .'" href="#'.  $jquery_click_hook  .'">'.  $value['name'] .'</a></li>';
+				$output .= '<div class="group" id="'. $jquery_click_hook  .'"><h2>'.$value['name'].'</h2>'."\n";
+			break;                                  
 		} 
 
 		
-		if ( !in_array( $value['type'], array("heading", "hidden") ) ) { 
+		if ( !in_array( $value['type'], array("heading", "hidden") ) )
+		{ 
 			$output .= '<br/>';
-			if (!isset($value['desc'])) { $descr = ''; } 
-			else { $descr = $value['desc']; } 
+			if (!isset($value['desc']))
+			{
+				$descr = '';
+			} 
+			else 
+			{ 
+				$descr = $value['desc']; 
+			} 
 			$output .= '</div><div class="explain">'. $descr .'</div>'."\n";
 			$output .= '<div class="clear"> </div></div></div>'."\n";
 		}

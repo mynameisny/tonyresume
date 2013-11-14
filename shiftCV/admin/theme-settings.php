@@ -6,7 +6,8 @@ $shortname = 'cv';
 // Sidebars array
 $sidebars = array("sidebar-blog" => "Blog Page Sidebar");
 $cnt = get_option($shortname.'_sidebars_count', 10);			// get_theme_option can't use - array not exists
-for ($i=1; $i<=$cnt; $i++) {
+for ($i=1; $i<=$cnt; $i++) 
+{
 	$sidebars['sidebar-custom-'.$i] = 'Custom sidebar '.$i;
 }
 
@@ -18,8 +19,7 @@ $theme_options = array();
 #### General               #### 
 ###############################
 */
-$theme_options[] = array( "name" => __('General', 'wpspace'),
-			"type" => "heading");
+$theme_options[] = array( "name" => __('General', 'wpspace'), "type" => "heading", "id" => "General");// id 属性为解决中文国际化无法切换标签的Bug。
 			
 $theme_options[] = array( "name" => __('Use as homepage', 'wpspace'),
 			"desc" => __('What page use as homepage', 'wpspace'),
@@ -119,8 +119,7 @@ $theme_options[] = array( "name" => __('Additional filters in admin panel', 'wps
 #### 	Section titles     #### 
 ###############################
 */
-$theme_options[] = array( "name" => __('Section titles', 'wpspace'),
-			"type" => "heading");
+$theme_options[] = array( "name" => __('Section titles', 'wpspace'), "type" => "heading", "id" => "Section_titles");// id 属性为解决中文国际化无法切换标签的Bug。
 
 $theme_options[] = array( "name" => __('Profile section title',  'wpspace'),
 			"desc" => "",
@@ -151,8 +150,7 @@ $theme_options[] = array( "name" => __('Contacts section title',  'wpspace'),
 #### Profile               #### 
 ###############################
 */
-$theme_options[] = array( "name" => __('Profile', 'wpspace'),
-			"type" => "heading");
+$theme_options[] = array( "name" => __('Profile', 'wpspace'), "type" => "heading", "id" => "Profile");// id 属性为解决中文国际化无法切换标签的Bug。
 
 $theme_options[] = array( "name" => __('Lastname',  'wpspace'),
 			"desc" => "Your lastname",
@@ -233,8 +231,7 @@ $theme_options[] = array( "name" => __('Description',  'wpspace'),
 #### Social                #### 
 ###############################
 */
-$theme_options[] = array( "name" => __('Social', 'wpspace'),
-			"type" => "heading");
+$theme_options[] = array( "name" => __('Social', 'wpspace'), "type" => "heading", "id" => "Social");// id 属性为解决中文国际化无法切换标签的Bug。
 
 $theme_options[] = array( "name" => __('Show social icons in header',  'wpspace'),
 			"desc" => "Do you want show social networks links in header area on your site",
@@ -289,8 +286,7 @@ $theme_options[] = array( "name" => __('RSS',  'wpspace'),
 #### Blog                  #### 
 ###############################
 */
-$theme_options[] = array( "name" => __('Blog', 'wpspace'),
-			"type" => "heading");
+$theme_options[] = array( "name" => __('Blog', 'wpspace'), "type" => "heading", "id" => "Blog");// id 属性为解决中文国际化无法切换标签的Bug。
 
 $theme_options[] = array( "name" => __('Blog enabled',  'wpspace'),
 			"desc" => "Do you want show blog posts on your site?",
@@ -352,8 +348,7 @@ $theme_options[] = array( "name" => __('Blog post title level', 'wpspace'),
 ####Sidebars Options#### 
 ########################
 */
-$theme_options[] = array( "name" => __('Sidebars', 'wpspace'),
-			"type" => "heading");
+$theme_options[] = array( "name" => __('Sidebars', 'wpspace'), "type" => "heading", "id" => "Sidebars");// id 属性为解决中文国际化无法切换标签的Bug。
 			
 $theme_options[] = array( "name" => __('Additional sidebars count',  'wpspace'),
 			"desc" => __('Select additional sidebars count (you can organize it in Theme Options - Widgets and use it in every page (post)',  'wpspace'),
@@ -396,8 +391,7 @@ $theme_options[] = array( "name" => __('Show sidebar on single pages (posts)',  
 ####Colors for each section#### 
 ###############################
 */
-$theme_options[] = array( "name" => __('Colors', 'wpspace'),
-			"type" => "heading");
+$theme_options[] = array( "name" => __('Colors', 'wpspace'), "type" => "heading", "id" => 'Colors');// id 属性为解决中文国际化无法切换标签的Bug。
 
 $theme_options[] = array( "name" => __('Profile section color',  'wpspace'),
 			"desc" => __('Color for Profile section tab',  'wpspace'),
@@ -485,10 +479,13 @@ load_all_theme_options();
 /*-----------------------------------------------------------------------------------*/
 /* Get all options array
 /*-----------------------------------------------------------------------------------*/
-function load_all_theme_options() {
+function load_all_theme_options() 
+{
 	global $theme_options;
-	foreach ($theme_options as $k => $item) {
-		if (isset($item['id'])) {
+	foreach ($theme_options as $k => $item) 
+	{
+		if (isset($item['id'])) 
+		{
 			if (($val = get_option($item['id'], false)) !== false)
 				$theme_options[$k]['val'] = $val;
 			else
@@ -501,26 +498,38 @@ function load_all_theme_options() {
 /* ==========================================================================================
    ==  Get theme option. If not exists - try get site option. If not exist - return default
    ========================================================================================== */
-function get_theme_option($option_name, $default = false) {
+function get_theme_option($option_name, $default = false) 
+{
 	global $shortname, $theme_options;
 	$fullname = my_substr($option_name, 0, my_strlen($shortname.'_')) == $shortname.'_' ? $option_name : $shortname.'_'.$option_name;
-	if (($val = get_option($fullname, false)) !== false) {
+	if (($val = get_option($fullname, false)) !== false) 
+	{
 		return $val;
-	} else {
+	} 
+	else 
+	{
 		$val = false;
-		foreach($theme_options as $option) {
-			if (isset($option['id']) && $option['id'] == $fullname) {
+		foreach($theme_options as $option) 
+		{
+			if (isset($option['id']) && $option['id'] == $fullname) 
+			{
 				$val = $option['val'];
 				break;
 			}
 		}
-		if ($val === false) {
-			if (($val = get_option($option_name, false)) !== false) {
+		if ($val === false) 
+		{
+			if (($val = get_option($option_name, false)) !== false) 
+			{
 				return $val;
-			} else {
+			} 
+			else 
+			{
 				return $default;
 			}
-		} else {
+		} 
+		else 
+		{
 			return $val;
 		}
 	}
@@ -530,11 +539,14 @@ function get_theme_option($option_name, $default = false) {
 /* ==========================================================================================
    ==  Update theme option
    ========================================================================================== */
-function update_theme_option($option_name, $value) {
+function update_theme_option($option_name, $value) 
+{
 	global $shortname, $theme_options;
 	$fullname = my_substr($option_name, 0, my_strlen($shortname.'_')) == $shortname.'_' ? $option_name : $shortname.'_'.$option_name;
-	foreach($theme_options as $k=>$option) {
-		if (isset($option['id']) && $option['id'] == $fullname) {
+	foreach($theme_options as $k=>$option) 
+	{
+		if (isset($option['id']) && $option['id'] == $fullname) 
+		{
 			$theme_options[$k]['val'] = $value;
 			update_option($fullname, $value);
 			break;
