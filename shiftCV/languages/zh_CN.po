@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: tonyresume\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 14:17+0800\n"
-"PO-Revision-Date: 2013-11-14 17:35+0800\n"
+"PO-Revision-Date: 2013-11-29 17:47+0800\n"
 "Last-Translator: mynameisny <mynameisny@qq.com>\n"
 "Language-Team: smiletony.com <mynameisny@qq.com>\n"
 "MIME-Version: 1.0\n"
@@ -24,25 +24,25 @@ msgstr "评论"
 
 #: ../shiftCV/comments.php:43
 msgid "Comments are closed."
-msgstr ""
+msgstr "评论已被关闭。"
 
 #: ../shiftCV/comments.php:53
 msgid "Post comment"
-msgstr ""
+msgstr "文章评论"
 
 #: ../shiftCV/comments.php:55
 msgid "Leave a comment"
-msgstr ""
+msgstr "发表评论"
 
 #: ../shiftCV/comments.php:63
 msgid "Your Message"
-msgstr ""
+msgstr "你的消息"
 
 #: ../shiftCV/comments.php:65
 #: ../shiftCV/template-print.php:57
 #: ../shiftCV/template-resume.php:63
 msgid "Name"
-msgstr ""
+msgstr "姓名"
 
 #: ../shiftCV/comments.php:67
 #: ../shiftCV/template-print.php:69
@@ -70,7 +70,7 @@ msgstr ""
 
 #: ../shiftCV/comments.php:113
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "您的评论正在等待审核。"
 
 #: ../shiftCV/footer.php:57
 msgid "Name field can not be empty"
@@ -87,19 +87,19 @@ msgstr ""
 
 #: ../shiftCV/footer.php:61
 msgid "Too long email address"
-msgstr ""
+msgstr "电子邮件地址过长"
 
 #: ../shiftCV/footer.php:62
 msgid "Incorrect email address"
-msgstr ""
+msgstr "电子邮件地址不正确"
 
 #: ../shiftCV/footer.php:63
 msgid "message can not be empty"
-msgstr ""
+msgstr "消息不能为空"
 
 #: ../shiftCV/footer.php:64
 msgid "Too long message"
-msgstr ""
+msgstr "消息过长"
 
 #: ../shiftCV/functions.php:88
 msgid "Blog Page Sidebar"
@@ -145,7 +145,7 @@ msgstr ""
 #: ../shiftCV/functions.php:465
 #: ../shiftCV/functions.php:502
 msgid "Select sidebar:"
-msgstr ""
+msgstr "显示侧边栏："
 
 #: ../shiftCV/functions.php:477
 msgid "Select sidebar, what should be showed with this category and nested."
@@ -154,7 +154,7 @@ msgstr ""
 #: ../shiftCV/functions.php:482
 #: ../shiftCV/functions.php:519
 msgid "Show sidebar:"
-msgstr ""
+msgstr "显示侧边栏："
 
 #: ../shiftCV/functions.php:486
 #: ../shiftCV/functions.php:523
@@ -164,7 +164,7 @@ msgstr ""
 #: ../shiftCV/functions.php:487
 #: ../shiftCV/functions.php:524
 msgid "Show sidebar"
-msgstr ""
+msgstr "显示侧边栏"
 
 #: ../shiftCV/functions.php:488
 #: ../shiftCV/functions.php:525
@@ -193,15 +193,15 @@ msgstr ""
 
 #: ../shiftCV/header.php:56
 msgid "Dark"
-msgstr ""
+msgstr "昏暗的"
 
 #: ../shiftCV/header.php:56
 msgid "Light"
-msgstr ""
+msgstr "明亮的"
 
 #: ../shiftCV/header.php:56
 msgid "Version"
-msgstr ""
+msgstr "版本"
 
 #: ../shiftCV/header.php:75
 msgid "RSS"
@@ -251,7 +251,7 @@ msgstr "关于"
 
 #: ../shiftCV/single.php:263
 msgid "Related posts"
-msgstr ""
+msgstr "相关文章"
 
 #: ../shiftCV/template-blog.php:89
 #: ../shiftCV/template-resume.php:169
@@ -260,7 +260,7 @@ msgstr ""
 
 #: ../shiftCV/template-blog.php:241
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "哎呀!该页面无法找到。"
 
 #: ../shiftCV/template-blog.php:243
 msgid "It looks like nothing was found at this location. Please, "
@@ -276,7 +276,7 @@ msgstr "搜索结果："
 
 #: ../shiftCV/template-blog.php:250
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr ""
+msgstr "抱歉,没有符合您的搜索条件。请再次尝试一些不同的关键词。"
 
 #: ../shiftCV/template-print.php:60
 #: ../shiftCV/template-resume.php:66
@@ -307,7 +307,7 @@ msgstr "博客"
 
 #: ../shiftCV/template-resume.php:107
 msgid "Print"
-msgstr ""
+msgstr "打印"
 
 #: ../shiftCV/template-resume.php:109
 msgid "Download"
@@ -319,11 +319,11 @@ msgstr ""
 
 #: ../shiftCV/template-resume.php:360
 msgid "Let's keep in touch"
-msgstr ""
+msgstr "让我们保持联络"
 
 #: ../shiftCV/admin/theme-options.php:367
 msgid "You really want reset all options to default values ?"
-msgstr ""
+msgstr "你真的想要重置所有选项为默认值？"
 
 #: ../shiftCV/admin/theme-settings.php:21
 msgid "General"
@@ -335,7 +335,7 @@ msgstr "使用作为首页"
 
 #: ../shiftCV/admin/theme-settings.php:25
 msgid "What page use as homepage"
-msgstr ""
+msgstr "使用哪个页面作为主页"
 
 #: ../shiftCV/admin/theme-settings.php:31
 msgid "Theme style"
@@ -343,23 +343,23 @@ msgstr "主题风格"
 
 #: ../shiftCV/admin/theme-settings.php:32
 msgid "What style use for site decoration"
-msgstr ""
+msgstr "使用哪种风格作为站点装饰"
 
 #: ../shiftCV/admin/theme-settings.php:38
 msgid "Show Theme style switcher"
-msgstr ""
+msgstr "显示“主题风格”转换开关"
 
 #: ../shiftCV/admin/theme-settings.php:39
 msgid "Show theme style switcher"
-msgstr ""
+msgstr "显示“主题风格”转换开关"
 
 #: ../shiftCV/admin/theme-settings.php:45
 msgid "Favicon"
-msgstr ""
+msgstr "网站偏爱图标"
 
 #: ../shiftCV/admin/theme-settings.php:46
 msgid "Upload a 16px x 16px image that will represent your website's favicon.<br /><br /><em>To ensure cross-browser compatibility, we recommend converting the favicon into .ico format before uploading. (<a href=\"http://www.favicon.cc/\">www.favicon.cc</a>)</em>"
-msgstr ""
+msgstr "上传一个16 px x 16 px图像,它将代表你的网站的偏爱图标。<br /><br /><em>为了确保跨浏览器的兼容性,我们建议在上传前先将图标转换成.ico格式。 (<a href=\"http://www.favicon.cc/\">www.favicon.cc</a>)</em>"
 
 #: ../shiftCV/admin/theme-settings.php:51
 msgid "Portfolio posts per page"
@@ -367,11 +367,11 @@ msgstr ""
 
 #: ../shiftCV/admin/theme-settings.php:58
 msgid "Show Google map on contact page"
-msgstr ""
+msgstr "在“联络我”页面显示谷歌地图"
 
 #: ../shiftCV/admin/theme-settings.php:59
 msgid "Show Google map in Contact section"
-msgstr ""
+msgstr "在“联络我”部分显示谷歌地图"
 
 #: ../shiftCV/admin/theme-settings.php:65
 msgid "Show Contact form on contact page"
@@ -403,19 +403,19 @@ msgstr "简历文件"
 
 #: ../shiftCV/admin/theme-settings.php:87
 msgid "Upload a resume file (.pdf, .doc, etc)"
-msgstr ""
+msgstr "上传一个简历文件（.pdf, .doc, 等）"
 
 #: ../shiftCV/admin/theme-settings.php:92
 msgid "Footer copyright text"
-msgstr ""
+msgstr "页脚版权信息文字内容"
 
 #: ../shiftCV/admin/theme-settings.php:98
 msgid "Analytics tracking code"
-msgstr ""
+msgstr "网站分析、追踪代码"
 
 #: ../shiftCV/admin/theme-settings.php:104
 msgid "Image dimensions"
-msgstr ""
+msgstr "图片尺寸规格"
 
 #: ../shiftCV/admin/theme-settings.php:105
 msgid "What dimensions use for uploaded image: Original or \"Retina ready\" (twice enlarged)"
@@ -431,15 +431,15 @@ msgstr ""
 
 #: ../shiftCV/admin/theme-settings.php:122
 msgid "Section titles"
-msgstr ""
+msgstr "区块标题"
 
 #: ../shiftCV/admin/theme-settings.php:125
 msgid "Profile section title"
-msgstr ""
+msgstr "“属性”区块标题"
 
 #: ../shiftCV/admin/theme-settings.php:131
 msgid "Resume section title"
-msgstr ""
+msgstr "“简历”区块标题"
 
 #: ../shiftCV/admin/theme-settings.php:137
 msgid "Portfolio section title"
@@ -447,7 +447,7 @@ msgstr ""
 
 #: ../shiftCV/admin/theme-settings.php:143
 msgid "Contacts section title"
-msgstr ""
+msgstr "“联络我”区块标题"
 
 #: ../shiftCV/admin/theme-settings.php:154
 msgid "Profile"
@@ -455,11 +455,11 @@ msgstr "资料"
 
 #: ../shiftCV/admin/theme-settings.php:157
 msgid "Lastname"
-msgstr ""
+msgstr "姓氏"
 
 #: ../shiftCV/admin/theme-settings.php:163
 msgid "Firstname"
-msgstr ""
+msgstr "名字"
 
 #: ../shiftCV/admin/theme-settings.php:169
 msgid "Photo"
@@ -483,7 +483,7 @@ msgstr "公司"
 
 #: ../shiftCV/admin/theme-settings.php:223
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../shiftCV/admin/theme-settings.php:236
 msgid "Social"
@@ -503,7 +503,7 @@ msgstr "LinkedIn"
 
 #: ../shiftCV/admin/theme-settings.php:295
 msgid "Blog enabled"
-msgstr ""
+msgstr "启用博客"
 
 #: ../shiftCV/admin/theme-settings.php:303
 msgid "Show post author"
@@ -647,7 +647,7 @@ msgstr ""
 
 #: ../shiftCV/admin/theme-settings.php:449
 msgid "Standard post"
-msgstr ""
+msgstr "标准文章"
 
 #: ../shiftCV/admin/theme-settings.php:450
 msgid "Color for \"Post date\" tab in Standard posts"
@@ -655,7 +655,7 @@ msgstr ""
 
 #: ../shiftCV/admin/theme-settings.php:455
 msgid "Gallery post"
-msgstr ""
+msgstr "画廊文章"
 
 #: ../shiftCV/admin/theme-settings.php:456
 msgid "Color for \"Post date\" tab in Gallery posts"
@@ -663,7 +663,7 @@ msgstr ""
 
 #: ../shiftCV/admin/theme-settings.php:461
 msgid "Audio post"
-msgstr ""
+msgstr "音频文章"
 
 #: ../shiftCV/admin/theme-settings.php:462
 msgid "Color for \"Post date\" tab in Audio posts"
@@ -671,7 +671,7 @@ msgstr ""
 
 #: ../shiftCV/admin/theme-settings.php:467
 msgid "Video post"
-msgstr ""
+msgstr "视频文章"
 
 #: ../shiftCV/admin/theme-settings.php:468
 msgid "Color for \"Post date\" tab in Video posts"
@@ -679,7 +679,7 @@ msgstr ""
 
 #: ../shiftCV/admin/theme-settings.php:473
 msgid "Link post"
-msgstr ""
+msgstr "链接文章"
 
 #: ../shiftCV/admin/theme-settings.php:474
 msgid "Color for \"Post date\" tab in Link posts"
@@ -687,15 +687,15 @@ msgstr ""
 
 #: ../shiftCV/includes/shortcodes.php:838
 msgid "Submit"
-msgstr ""
+msgstr "确定"
 
 #: ../shiftCV/includes/shortcodes.php:899
 msgid "Your message sended!"
-msgstr ""
+msgstr "您的消息已发送！"
 
 #: ../shiftCV/includes/shortcodes.php:902
 msgid "Transmit failed!"
-msgstr ""
+msgstr "传输失败！"
 
 #: ../shiftCV/includes/shortcodes.php:933
 #, php-format
@@ -725,11 +725,11 @@ msgstr ""
 
 #: ../shiftCV/includes/wp-pagenavi.php:204
 msgid "First"
-msgstr ""
+msgstr "第一页"
 
 #: ../shiftCV/includes/wp-pagenavi.php:205
 msgid "Last"
-msgstr ""
+msgstr "最后一页"
 
 #: ../shiftCV/includes/wp-pagenavi.php:207
 msgid "Prev"
@@ -738,7 +738,7 @@ msgstr ""
 #: ../shiftCV/includes/wp-pagenavi.php:208
 #: ../shiftCV/includes/wp-pagenavi.php:209
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: ../shiftCV/includes/_wp_utils.php:147
 msgid "Videos"
@@ -746,7 +746,7 @@ msgstr "视频"
 
 #: ../shiftCV/includes/_wp_utils.php:150
 msgid "Galleries"
-msgstr ""
+msgstr "画廊"
 
 #: ../shiftCV/includes/_wp_utils.php:185
 msgid "Resume"
@@ -758,12 +758,12 @@ msgstr ""
 
 #: ../shiftCV/includes/_wp_utils.php:191
 msgid "Posts"
-msgstr ""
+msgstr "文章"
 
 #: ../shiftCV/includes/_wp_utils.php:199
 #, php-format
 msgid "All %s"
-msgstr ""
+msgstr "全部 %s"
 
 #: ../shiftCV/includes/_wp_utils.php:278
 #: ../shiftCV/includes/_wp_utils.php:280
@@ -774,7 +774,7 @@ msgstr ""
 
 #: ../shiftCV/includes/_wp_utils.php:278
 msgid "All Resume"
-msgstr ""
+msgstr "全部简历"
 
 #: ../shiftCV/includes/_wp_utils.php:280
 msgid "All Portfolio"
@@ -782,15 +782,15 @@ msgstr ""
 
 #: ../shiftCV/includes/_wp_utils.php:282
 msgid "All Videos"
-msgstr ""
+msgstr "全部视频"
 
 #: ../shiftCV/includes/_wp_utils.php:284
 msgid "All Photos"
-msgstr ""
+msgstr "全部图片"
 
 #: ../shiftCV/includes/_wp_utils.php:286
 msgid "All Posts"
-msgstr ""
+msgstr "全部文章"
 
 #: ../shiftCV/includes/_wp_utils.php:288
 msgid "Author page"
@@ -798,7 +798,7 @@ msgstr ""
 
 #: ../shiftCV/includes/_wp_utils.php:290
 msgid "URL not found"
-msgstr ""
+msgstr "找不到URL"
 
 #: ../shiftCV/includes/_wp_utils.php:292
 #, php-format
@@ -854,7 +854,7 @@ msgstr ""
 
 #: ../shiftCV/includes/_wp_utils.php:439
 msgid "This post is password protected. To view it please enter your password inside the post."
-msgstr ""
+msgstr "这篇文章是被密码保护的。想要查看它，请输入你在文章中的密码。"
 
 #: ../shiftCV/includes/_wp_utils.php:826
 #: ../shiftCV/includes/_wp_utils.php:834
