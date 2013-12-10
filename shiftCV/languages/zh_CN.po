@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: tonyresume\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 14:17+0800\n"
-"PO-Revision-Date: 2013-12-06 00:54+0800\n"
+"PO-Revision-Date: 2013-12-07 03:17+0800\n"
 "Last-Translator: Tony Joseph <mynameisny@qq.com>\n"
 "Language-Team: smiletony.com <mynameisny@qq.com>\n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgstr "电子邮箱"
 
 #: ../shiftCV/comments.php:86
 msgid "Trackback:"
-msgstr ""
+msgstr "引用："
 
 #: ../shiftCV/comments.php:86
 #: ../shiftCV/comments.php:92
@@ -62,7 +62,7 @@ msgstr "编辑"
 
 #: ../shiftCV/comments.php:92
 msgid "Pingback:"
-msgstr ""
+msgstr "广播："
 
 #: ../shiftCV/comments.php:109
 msgid "ago"
@@ -74,12 +74,12 @@ msgstr "您的评论正在等待审核。"
 
 #: ../shiftCV/footer.php:57
 msgid "Name field can not be empty"
-msgstr ""
+msgstr "名称字段不能为空"
 
 #: ../shiftCV/footer.php:58
 #: ../shiftCV/footer.php:59
 msgid "Too long name field"
-msgstr ""
+msgstr "名称字段过长"
 
 #: ../shiftCV/footer.php:60
 msgid "Too short (or empty) email address"
@@ -111,7 +111,7 @@ msgstr "简历页面侧边栏"
 
 #: ../shiftCV/functions.php:104
 msgid "Contact Page Sidebar"
-msgstr ""
+msgstr "联络页面侧边栏"
 
 #: ../shiftCV/functions.php:113
 #, php-format
@@ -124,15 +124,15 @@ msgstr "分类颜色："
 
 #: ../shiftCV/functions.php:355
 msgid "Category title background:"
-msgstr ""
+msgstr "分类标题背景："
 
 #: ../shiftCV/functions.php:454
 msgid "Custom settings for this category (and nested):"
-msgstr ""
+msgstr "这个分类的自定义设置（以及嵌套分类）："
 
 #: ../shiftCV/functions.php:455
 msgid "Select parameters for showing posts in this category and all nested categories. Attention: In each nested categories you can override this settings."
-msgstr ""
+msgstr "为这个分类以及全部嵌套分类的显示文章选择参数。注意：在每个嵌套分类中你可以覆盖这些设置。"
 
 #: ../shiftCV/functions.php:459
 msgid "Blog streampage settings:"
@@ -140,7 +140,7 @@ msgstr "博客流页面设置："
 
 #: ../shiftCV/functions.php:460
 msgid "Select parameters for streampage with this category."
-msgstr ""
+msgstr "为这个分类下的流页面选择参数。"
 
 #: ../shiftCV/functions.php:465
 #: ../shiftCV/functions.php:502
@@ -149,7 +149,7 @@ msgstr "显示侧边栏："
 
 #: ../shiftCV/functions.php:477
 msgid "Select sidebar, what should be showed with this category and nested."
-msgstr ""
+msgstr "选择使用这个分类以及嵌套分类应该被显示在独立页面的侧边栏。"
 
 #: ../shiftCV/functions.php:482
 #: ../shiftCV/functions.php:519
@@ -159,7 +159,7 @@ msgstr "显示侧边栏："
 #: ../shiftCV/functions.php:486
 #: ../shiftCV/functions.php:523
 msgid "As in Site Options"
-msgstr ""
+msgstr "作为站点的选项"
 
 #: ../shiftCV/functions.php:487
 #: ../shiftCV/functions.php:524
@@ -181,15 +181,15 @@ msgstr "独立页面设置："
 
 #: ../shiftCV/functions.php:497
 msgid "Select parameters for single pages with this category."
-msgstr ""
+msgstr "为这个分类的下的独立页面选择参数"
 
 #: ../shiftCV/functions.php:514
 msgid "Select sidebar, what should be showed on single posts with this category and nested."
-msgstr ""
+msgstr "选择使用这个分类以及嵌套分类应该被显示在独立页面的侧边栏。"
 
 #: ../shiftCV/functions.php:527
 msgid "Show sidebar for single posts with this category and nested."
-msgstr ""
+msgstr "为这个分类以及嵌套分类中的独立页面选择侧边栏"
 
 #: ../shiftCV/header.php:56
 msgid "Dark"
@@ -256,7 +256,7 @@ msgstr "相关文章"
 #: ../shiftCV/template-blog.php:89
 #: ../shiftCV/template-resume.php:169
 msgid "<span class=\"readmore\">Read more</span>"
-msgstr ""
+msgstr "<span class=\"readmore\">阅读更多</span>"
 
 #: ../shiftCV/template-blog.php:241
 msgid "Oops! That page can&rsquo;t be found."
@@ -264,7 +264,7 @@ msgstr "哎呀!该页面无法找到。"
 
 #: ../shiftCV/template-blog.php:243
 msgid "It looks like nothing was found at this location. Please, "
-msgstr ""
+msgstr "看起来在这个位置什么也没有找到。请，"
 
 #: ../shiftCV/template-blog.php:244
 msgid "start from our homepage"
@@ -383,11 +383,11 @@ msgstr "在联络我区块显示表单"
 
 #: ../shiftCV/admin/theme-settings.php:72
 msgid "Show post excerpt in portfolio preview"
-msgstr ""
+msgstr "在作品预览中显示文章摘要"
 
 #: ../shiftCV/admin/theme-settings.php:73
 msgid "Enable to show post content in portfolio section"
-msgstr ""
+msgstr "启用在作品区块内显示文章"
 
 #: ../shiftCV/admin/theme-settings.php:79
 msgid "Show \"Print\" and \"Download\" buttons in Resume section"
@@ -419,7 +419,7 @@ msgstr "图片尺寸规格"
 
 #: ../shiftCV/admin/theme-settings.php:105
 msgid "What dimensions use for uploaded image: Original or \"Retina ready\" (twice enlarged)"
-msgstr ""
+msgstr "上传图片使用的图片规模：原始大小或者“Retina ready”（扩大两倍的）"
 
 #: ../shiftCV/admin/theme-settings.php:111
 msgid "Additional filters in admin panel"
@@ -427,7 +427,7 @@ msgstr "在管理面板中的附加过滤器"
 
 #: ../shiftCV/admin/theme-settings.php:112
 msgid "Show additional filters (on post format and tags) in admin panel page \"Posts\""
-msgstr ""
+msgstr "在管理面板页面“文章”显示附加的过滤器（关于文章格式和标记）"
 
 #: ../shiftCV/admin/theme-settings.php:122
 msgid "Section titles"
@@ -563,11 +563,11 @@ msgstr "在博客页面显示或者隐藏侧边栏"
 
 #: ../shiftCV/admin/theme-settings.php:379
 msgid "Select sidebar for single pages (posts)"
-msgstr "为独立页面选择侧边栏（文章）。"
+msgstr "为独立页面选择侧边栏（文章）"
 
 #: ../shiftCV/admin/theme-settings.php:380
 msgid "Select default sidebar for all single pages (posts). In each page (post) you can override this settings."
-msgstr ""
+msgstr "为全部的独立页面（文章）选择默认的侧边栏。在每个页面（文章）中你可以覆盖这些设置。"
 
 #: ../shiftCV/admin/theme-settings.php:386
 msgid "Show sidebar on single pages (posts)"
@@ -587,7 +587,7 @@ msgstr "资料区块颜色"
 
 #: ../shiftCV/admin/theme-settings.php:403
 msgid "Color for Profile section tab"
-msgstr ""
+msgstr "资料区域标签颜色"
 
 #: ../shiftCV/admin/theme-settings.php:408
 msgid "Resume section color"
@@ -595,7 +595,7 @@ msgstr "简历区块颜色"
 
 #: ../shiftCV/admin/theme-settings.php:409
 msgid "Color for Resume section tab"
-msgstr ""
+msgstr "简历区域标签颜色"
 
 #: ../shiftCV/admin/theme-settings.php:414
 msgid "Download resume button color"
@@ -611,7 +611,7 @@ msgstr "作品区块颜色"
 
 #: ../shiftCV/admin/theme-settings.php:421
 msgid "Color for Portfolio section tab"
-msgstr ""
+msgstr "作品区域标签颜色"
 
 #: ../shiftCV/admin/theme-settings.php:426
 msgid "Contacts section color"
@@ -619,7 +619,7 @@ msgstr "联络我区块颜色"
 
 #: ../shiftCV/admin/theme-settings.php:427
 msgid "Color for Contacts section tab"
-msgstr ""
+msgstr "联络信息区域标签颜色"
 
 #: ../shiftCV/admin/theme-settings.php:432
 msgid "Go to Blog button color"
@@ -643,7 +643,7 @@ msgstr "博客文章日期区域颜色"
 
 #: ../shiftCV/admin/theme-settings.php:445
 msgid "Color for \"Post date\" tab for each posts type"
-msgstr ""
+msgstr "任意文章类型的“发表日期”标签颜色"
 
 #: ../shiftCV/admin/theme-settings.php:449
 msgid "Standard post"
@@ -651,7 +651,7 @@ msgstr "标准文章"
 
 #: ../shiftCV/admin/theme-settings.php:450
 msgid "Color for \"Post date\" tab in Standard posts"
-msgstr ""
+msgstr "标准文章的“发表日期”标签颜色"
 
 #: ../shiftCV/admin/theme-settings.php:455
 msgid "Gallery post"
@@ -659,7 +659,7 @@ msgstr "画廊文章"
 
 #: ../shiftCV/admin/theme-settings.php:456
 msgid "Color for \"Post date\" tab in Gallery posts"
-msgstr ""
+msgstr "画廊文章的“发表日期”标签颜色"
 
 #: ../shiftCV/admin/theme-settings.php:461
 msgid "Audio post"
@@ -667,7 +667,7 @@ msgstr "音频文章"
 
 #: ../shiftCV/admin/theme-settings.php:462
 msgid "Color for \"Post date\" tab in Audio posts"
-msgstr ""
+msgstr "音频文章的“发表日期”标签颜色"
 
 #: ../shiftCV/admin/theme-settings.php:467
 msgid "Video post"
@@ -675,7 +675,7 @@ msgstr "视频文章"
 
 #: ../shiftCV/admin/theme-settings.php:468
 msgid "Color for \"Post date\" tab in Video posts"
-msgstr ""
+msgstr "视频文章的“发表日期”标签颜色"
 
 #: ../shiftCV/admin/theme-settings.php:473
 msgid "Link post"
@@ -683,7 +683,7 @@ msgstr "链接文章"
 
 #: ../shiftCV/admin/theme-settings.php:474
 msgid "Color for \"Post date\" tab in Link posts"
-msgstr ""
+msgstr "链接文章的“发表日期”标签颜色"
 
 #: ../shiftCV/includes/shortcodes.php:838
 msgid "Submit"
@@ -700,7 +700,7 @@ msgstr "传输失败！"
 #: ../shiftCV/includes/shortcodes.php:933
 #, php-format
 msgid "Site %s - Contact form message from %s"
-msgstr ""
+msgstr "站点 %s - 来自%s的联络表单信息"
 
 #: ../shiftCV/includes/type-portfolio.php:53
 msgid "Portfolio Item Link"
@@ -833,7 +833,7 @@ msgstr "附件： %s"
 #: ../shiftCV/includes/_wp_utils.php:332
 #, php-format
 msgid "Page <span>%s</span> of <span>%s</span>"
-msgstr ""
+msgstr "页 <span>%s</span> of <span>%s</span>"
 
 #: ../shiftCV/includes/_wp_utils.php:358
 msgid "Post navigation"
@@ -841,16 +841,16 @@ msgstr "文章导航"
 
 #: ../shiftCV/includes/_wp_utils.php:364
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> 旧文章"
 
 #: ../shiftCV/includes/_wp_utils.php:367
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "新文章 <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../shiftCV/includes/_wp_utils.php:408
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "页 %s"
 
 #: ../shiftCV/includes/_wp_utils.php:439
 msgid "This post is password protected. To view it please enter your password inside the post."
@@ -860,5 +860,5 @@ msgstr "这篇文章是被密码保护的。想要查看它，请输入你在文
 #: ../shiftCV/includes/_wp_utils.php:834
 #, php-format
 msgid "View posts for %1$s %2$s"
-msgstr ""
+msgstr "为 %1$s %2$s显示文章"
 
