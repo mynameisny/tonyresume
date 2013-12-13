@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: tonyresume\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 14:17+0800\n"
-"PO-Revision-Date: 2013-12-07 03:17+0800\n"
+"PO-Revision-Date: 2013-12-12 21:54+0800\n"
 "Last-Translator: Tony Joseph <mynameisny@qq.com>\n"
 "Language-Team: smiletony.com <mynameisny@qq.com>\n"
 "MIME-Version: 1.0\n"
@@ -193,11 +193,11 @@ msgstr "为这个分类以及嵌套分类中的独立页面选择侧边栏"
 
 #: ../shiftCV/header.php:56
 msgid "Dark"
-msgstr "昏暗的"
+msgstr "Dark"
 
 #: ../shiftCV/header.php:56
 msgid "Light"
-msgstr "明亮的"
+msgstr "Light"
 
 #: ../shiftCV/header.php:56
 msgid "Version"
