@@ -8,21 +8,24 @@ add_action( 'widgets_init', 'qrcode_vcard_load_widgets' );
 /**
  * Register our widget.
  */
-function qrcode_vcard_load_widgets() {
+function qrcode_vcard_load_widgets() 
+{
 	register_widget('qrcode_vcard_widget');
 }
 
 /**
  * QRCode VCard Widget class.
  */
-class qrcode_vcard_widget extends WP_Widget {
+class qrcode_vcard_widget extends WP_Widget
+{
 
 	/**
 	 * Widget setup.
 	 */
-	function qrcode_vcard_widget() {
+	function qrcode_vcard_widget() 
+	{
 		/* Widget settings. */
-		$widget_ops = array('classname' => 'widget_qrcode_vcard', 'description' => 'Generate QRCode for your VCard');
+		$widget_ops = array('classname' => 'widget_qrcode_vcard', 'description' => '为你的电子名片生成QRCode');
 
 		/* Widget control settings. */
 		$control_ops = array('width' => 200, 'height' => 250, 'id_base' => 'qrcode-vcard-widget');
@@ -34,7 +37,8 @@ class qrcode_vcard_widget extends WP_Widget {
 	/**
 	 * How to display the widget on the screen.
 	 */
-	function widget($args, $instance) {
+	function widget($args, $instance) 
+	{
 		wp_enqueue_style( 'widget-qrcode-vcard',  get_template_directory_uri() . '/widgets/qrcode/widget-qrcode-vcard.css' );
 		wp_enqueue_script('qrcode', get_template_directory_uri().'/widgets/qrcode/jquery.qrcode-0.6.0.min.js', array('jquery'), '0.2', true);
 		wp_enqueue_script('jquery_tools', get_template_directory_uri().'/js/jquery.tools.custom.js', array('jquery'), '1.2.6', true);
@@ -69,9 +73,15 @@ class qrcode_vcard_widget extends WP_Widget {
         if ($subtitle)	$output .= '<div class="widget_subtitle">'.$subtitle.'</div>';
 		if ($title) 	$output .= $before_title . $title . $after_title;		
 		
+		/*
 		$output .= '
 				<div class="widget_inner' . ($show_personal ? ' with_personal_data' : '') . '">
 					<div class="qrcode"><img src="' . $image . '" /></div>
+					';
+		*/
+		$output .= '
+				<div class="widget_inner' . ($show_personal ? ' with_personal_data' : '') . '">
+					<div class="qrcode"><img src="' . $image . '" style="width:160px;height:160px;" /></div>
 					';
 		if ($show_personal) 
 			$output .= '
@@ -99,7 +109,8 @@ class qrcode_vcard_widget extends WP_Widget {
 	/**
 	 * Update the widget settings.
 	 */
-	function update($new_instance, $old_instance) {
+	function update($new_instance, $old_instance) 
+	{
 		$instance = $old_instance;
 
 		/* Strip tags for title and comments count to remove HTML (important for text inputs). */
@@ -136,7 +147,8 @@ class qrcode_vcard_widget extends WP_Widget {
 	 * Make use of the get_field_id() and get_field_name() function
 	 * when creating your form elements. This handles the confusing stuff.
 	 */
-	function form($instance) {
+	function form($instance)
+	{
 		
 		/* Widget admin side css */
 		wp_enqueue_style( 'widget-qrcode-vcard',  get_template_directory_uri() . '/widgets/qrcode/widget-qrcode-vcard-admin.css' );
@@ -283,11 +295,14 @@ class qrcode_vcard_widget extends WP_Widget {
             jQuery(document).ready(function(){
 				initQRCode();
             });
-			function initQRCode() {
+			function initQRCode() 
+			{
 				var widget = null;
-				jQuery('#widgets-right .widget_qrcode input.iColorPicker').each(function() {
+				jQuery('#widgets-right .widget_qrcode input.iColorPicker').each(function() 
+				{
 					var obj = jQuery(this);
-					if (!obj.hasClass('colored') && obj.attr('id').indexOf('__i__') < 0) {
+					if (!obj.hasClass('colored') && obj.attr('id').indexOf('__i__') < 0) 
+					{
 						widget = obj.parents('.widget_qrcode');
 						obj.addClass('colored');
 						setColorPicker(jQuery(this).attr('id'));
@@ -312,7 +327,8 @@ class qrcode_vcard_widget extends WP_Widget {
                 if (widget && widget.find('.fld_auto_draw').attr('checked')=='checked')
 					widget.find('.fld_button_draw').hide();
 			}
-            function updateQRCode(widget) {
+            function updateQRCode(widget) 
+            {
 				showQRCode(widget, {
                         ufname:		widget.find('.fld_ufname').val(),
                         ulname:		widget.find('.fld_ulname').val(),
@@ -340,7 +356,8 @@ class qrcode_vcard_widget extends WP_Widget {
                 );
 				widget.find('.fld_image').val(widget.find('.qrcode_image canvas').get(0).toDataURL('image/png'));
             }
-			function showQRCode(widget, vc, opt) {
+			function showQRCode(widget, vc, opt) 
+			{
 				var vcard = 'BEGIN:VCARD\n'
 					+ 'VERSION:3.0\n'
 					+ 'FN:' + vc.ufname + ' ' + vc.ulname + '\n'
@@ -378,19 +395,24 @@ class qrcode_vcard_widget extends WP_Widget {
 					).show();
 			}
 			
-			if (!window.setColorPicker) {
-				function setColorPicker(id_picker) {
+			if (!window.setColorPicker) 
+			{
+				function setColorPicker(id_picker) 
+				{
 					jQuery('#'+id_picker).ColorPicker({
 						color: jQuery('#'+id_picker).val(),
-						onShow: function (colpkr) {
+						onShow: function (colpkr) 
+						{
 							jQuery(colpkr).fadeIn(500);
 							return false;
 						},
-						onHide: function (colpkr) {
+						onHide: function (colpkr) 
+						{
 							jQuery(colpkr).fadeOut(500);
 							return false;
 						},
-						onChange: function (hsb, hex, rgb) {
+						onChange: function (hsb, hex, rgb) 
+						{
 							jQuery('#'+id_picker).css('backgroundColor', '#' + hex).val('#' + hex);
 						}
 					});
