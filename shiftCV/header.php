@@ -51,11 +51,17 @@ global $theme_custom_settings;
 			<td class="cl5"></td>
 		</tr>
 	</table>
-	<?php if (get_theme_option('theme_style_switcher')==1) { ?>
+	<?php 
+	if (get_theme_option('theme_style_switcher')==1) 
+	{ 
+	?>
 	<div id="swither_block">
-		<a href="#" id="theme_switcher"><span class="switch_icon icon-cog"></span><span class="switch_wrap"><?php echo $theme_custom_settings['theme_style'] == _e('Dark', 'wpspace') ? _e('Light', 'wpspace') : _e('Dark', 'wpspace'); ?><?php _e('Version', 'wpspace'); ?></span></a>
+		<!--<a href="#" id="theme_switcher"><span class="switch_icon icon-cog"></span><span class="switch_wrap"><?php echo $theme_custom_settings['theme_style'] == _e('Dark', 'wpspace') ? _e('Light', 'wpspace') : _e('Dark', 'wpspace'); ?><?php _e('Version', 'wpspace'); ?></span></a>-->
+		<a href="#" id="theme_switcher"><span class="switch_icon icon-cog"></span><span class="switch_wrap"><?php my_strtolower($theme_custom_settings['theme_style'])==my_strtolower(__('Dark', 'wpspace')) ? _e('Light', 'wpspace') : _e('Dark', 'wpspace'); ?> <?php _e('Version', 'wpspace'); ?></span></a>
 	</div>
-	<?php } ?>
+	<?php 
+	} 
+	?>
     <div id="page" class="hfeed site">
         <?php do_action( 'before' ); ?>
         <header id="header" class="site_header" role="banner">
