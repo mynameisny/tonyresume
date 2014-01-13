@@ -109,9 +109,14 @@ body.dark {
 .dark input[type="search"],
 .dark input[type="password"],
 .dark textarea {
+	/*edit by tony
 	background: #1e1e1e;
 	border: 2px solid #3b3b3b;
 	color: #fff;
+	*/
+	background: none repeat scroll 0 0 #1E1E1E;
+    border: 2px solid #3B3B3B;
+    color: #FFFFFF;
 }
 .dark .sc_contact_form form .field label {
 	color: #878787;
@@ -145,6 +150,18 @@ body.dark {
 .dark #header .social_links li.vim a {
 	background-image: url(../images/icon-vimeo-dark.png);
 }
+.dark #header .social_links li.skp a {
+	background-image: url(../images/icon-skype-dark.png);
+}
+.dark #header .social_links li.pin a {
+	background-image: url(../images/icon-pinterest-dark.png);
+}
+.dark #header .social_links li.xing a {
+	background: url(../images/icon-xing-dark.png) center 0 no-repeat;
+}
+.dark #header .social_links li.slide_share a {
+	background: url(../images/icon-slideshare-dark.png) center 0 no-repeat;
+}
 
 .dark #header .social_links li.fb a:hover {
 	background-image: url(../images/icon-facebook.png);
@@ -167,6 +184,18 @@ body.dark {
 .dark #header .social_links li.vim a:hover {
 	background-image: url(../images/icon-vimeo.png);
 }
+.dark #header .social_links li.skp a:hover {
+	background-image: url(../images/icon-skype.png);
+}
+.dark #header .social_links li.pin a:hover {
+	background-image: url(../images/icon-pinterest.png);
+}
+.dark #header .social_links li.xing a:hover {
+	background: url(../images/icon-xing.png) center 0 no-repeat;
+}
+.dark #header .social_links li.slide_share a:hover {
+	background: url(../images/icon-slideshare.png) center 0 no-repeat;
+}
 .dark ul.breadcrumbs {
 	background: #2c2c2c;
 }
@@ -182,7 +211,10 @@ body.dark {
 .dark .right_sidebar #primary {
 	background: url(../images/v_line_dark.gif) right 0 repeat-y;
 }
-.dark .blog_section article.post.format-link {
+.dark .blog_section article.post.format-link,
+.dark .blog_section article.post.format-status,
+.dark .single .blog_section article.post.format-link .link,
+.dark .blog_section article.post.format-quote {
 	border-color: #3b3b3b;
 }
 .dark .mejs-container {
@@ -289,7 +321,7 @@ body.dark {
 .dark #post_author h3 a {
 	color: #fff;
 }
-.dark .blog_section article h3 {
+.dark .blog_section article .post_title {
 	color: #fff;
 }
 .dark #commentform label {
