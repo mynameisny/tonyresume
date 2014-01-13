@@ -9,8 +9,37 @@
 		}
 	});
 
-	jQuery(document).ready(function() {
-
+	jQuery(document).ready(function()
+	{
+		jQuery('#opt_block .opt_header span').click(function()
+		{
+			if(jQuery(this).hasClass('vis')) 
+			{
+				jQuery(this).removeClass('vis').parents('#opt_block').animate({'marginRight':0}, 700, 'easeInCubic');
+			}
+			else
+			{
+				jQuery(this).addClass('vis').parents('#opt_block').animate({'marginRight':222}, 700, 'easeInCubic');
+			}
+		});
+		jQuery('.patterns_select li a').click(function()
+		{
+			var src = jQuery(this).find('img').attr('src');
+			jQuery('body').addClass('colored').removeClass('image_bg').css({'background': 'url('+src+')'});
+			setCookie('body_pt', src, 9999999, '/');
+			deleteCookie('body_img', '/');
+			deleteCookie('body_bg', '/');
+			return false;
+		});
+		jQuery('.bg_select li a').click(function()
+		{
+			var src = jQuery(this).find('img').attr('src');
+			jQuery('body').addClass('image_bg').css({'background': 'url('+src+')'});
+			setCookie('body_img', src, 9999999, '/');
+			deleteCookie('body_bg', '/');
+			deleteCookie('body_pt', '/');
+			return false;
+		});
 		// Disable select text on dbl click
 		/*
 		jQuery('.registration-popup-link').mousedown(function(e){
@@ -25,14 +54,19 @@
 
 		// toTop link setup
 		"use strict";
-		jQuery(window).scroll(function() {
-			if(jQuery(this).scrollTop() >= 110) {
+		jQuery(window).scroll(function() 
+		{
+			if(jQuery(this).scrollTop() >= 110) 
+			{
 				jQuery('#toTop').show();	
-			} else {
+			} 
+			else 
+			{
 				jQuery('#toTop').hide();	
 			}
 		});
-		jQuery('#toTop').click(function(e) {
+		jQuery('#toTop').click(function(e) 
+		{
 			jQuery('body,html').animate({scrollTop:0}, 800);
 			e.preventDefault();
 		});
@@ -42,8 +76,10 @@
 
 		// Pretty photo
 		jQuery("a[href$='jpg'],a[href$='jpeg'],a[href$='png'],a[href$='gif']").attr('rel', 'prettyPhoto');
-		jQuery("a[rel^='prettyPhoto']").click(function(e) {
-			if (jQuery(window).width()<480)	{
+		jQuery("a[rel^='prettyPhoto']").click(function(e) 
+		{
+			if (jQuery(window).width()<480)	
+			{
 				e.stopImmediatePropagation();
 				window.location = jQuery(this).attr('href');
 			}
@@ -61,7 +97,8 @@
 			effect : 'slide',
 			slideUpSpeed: 600,
 			slideDownSpeed: 600,
-			onClick: function (e, tabIndex) {
+			onClick: function (e, tabIndex) 
+			{
 				var tabs = jQuery('#mainpage_accordion_area section > .section_header > .section_title');
 				var tab = tabs.eq(tabIndex);
 				if (tab.hasClass('resume_section_title')) {					// Resume
@@ -203,7 +240,7 @@
 		}
 		var top = jQuery(document).scrollTop();
 		if(jQuery('#resume').offset().top-60 < top || parseInt(jQuery('#resume_buttons').css('top'), 10) > 0) {
-			var pr_h = jQuery('#resume_buttons').parent().height()-120;
+			var pr_h = jQuery('#resume_buttons').parent().height()-60;
 			top = Math.min(pr_h, Math.max(0, top-jQuery('#resume').offset().top+50));
 			jQuery('#resume_buttons').css({'top':top});
 		}
@@ -284,3 +321,49 @@ function pagesClear() {
 	jQuery(".portfolio_iso_pages").hide();
 	curIsotopePage = '';
 }
+function hideCommentScroll() {
+	var com_top = jQuery('#comments').offset().top;
+	var win_top = jQuery(window).scrollTop();
+	var win_ht = jQuery(window).height();
+	if((win_top + win_ht)-200 > com_top){
+		jQuery('#scrollTo').hide();
+	}
+	else {
+		jQuery('#scrollTo').show();
+	}
+}
+
+function setColorPicker(id) {
+
+	jQuery('#'+id).ColorPicker({
+		color: jQuery('#'+id).val(),
+		onShow: function (colpkr) {
+			jQuery(colpkr).fadeIn(500);
+			return false;
+		},
+		onHide: function (colpkr) {
+			jQuery(colpkr).fadeOut(500);
+			return false;
+		},
+		onChange: function (hsb, hex, rgb) {
+			jQuery('body').css('background', '#' + hex);
+			jQuery('#'+id).css('backgroundColor', '#' + hex);
+			setCookie('body_bg', '#'+hex, 9999999, '/');
+			deleteCookie('body_img', '/');
+			deleteCookie('body_pt', '/');
+		}
+	});
+}
+jQuery(window).load(function(){
+	if(jQuery('#comments').length > 0) {
+	hideCommentScroll();
+	jQuery('#scrollTo').click(function(){
+		var target = jQuery(this).attr('href');
+		var ofs = jQuery(target).offset().top;
+		jQuery('html, body').animate({scrollTop : ofs-150});
+	});
+	jQuery(window).scroll(function(){
+		hideCommentScroll();
+	});
+	}
+});

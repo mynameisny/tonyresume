@@ -18,9 +18,42 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
+<!-- 自定义背景START -->
+<div id="opt_block" style="margin-right: 222px;">
+	<div class="opt_header">
+		<span class="vis"></span>
+	</div>
+	<div class="opt_row bg_color">
+		<h3>background color:</h3>
+		<div class="colorSelector" id="bg_col"></div>
+	</div>
+	<div class="opt_row bg_pat">
+		<h3>Background Pattern:</h3>
+		<ul class="patterns_select">
+			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/patterns/pattern1.png"></a></li>
+			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/patterns/pattern2.png"></a></li>
+			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/patterns/pattern3.jpg"></a></li>
+			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/patterns/pattern4.png"></a></li>
+			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/patterns/pattern5.png"></a></li>
+		</ul>
+	</div>
+	<div class="opt_row bg_img">
+		<h3>Background Image:</h3>
+		<ul class="bg_select">
+			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/bg1.jpg"></a></li>
+			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/bg2.jpg"></a></li>
+			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/bg3.jpg"></a></li>
+		</ul>
+	</div>
+</div>
+<!-- 自定义背景END -->
+
 <a href="#" id="toTop"></a>
+
 <script type="text/javascript">
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function() 
+    {
         jQuery.reject({
 			reject : {
 				all: false, // Nothing blocked
@@ -54,14 +87,21 @@
             closeMessage: 'Close this window at your own demise!' // Message below close window link
         });
     });
-        empt = '<?php _e("Name field can not be empty", "wpspace"); ?>';
-        to_lng = '<?php _e("Too long name field", "wpspace"); ?>';
-        to_lng = '<?php _e("Too long name field", "wpspace"); ?>';
-        empt_mail = '<?php _e("Too short (or empty) email address", "wpspace"); ?>';
-        to_lng_mail = '<?php _e("Too long email address", "wpspace"); ?>';
-        incor = '<?php _e("Incorrect email address", "wpspace"); ?>';
-        mes_empt = '<?php _e("message can not be empty", "wpspace"); ?>';
-        to_lng_mes = '<?php _e("Too long message", "wpspace"); ?>';
+
+    empt = '<?php _e("Name field can not be empty", "wpspace"); ?>';
+    to_lng = '<?php _e("Too long name field", "wpspace"); ?>';
+    to_lng = '<?php _e("Too long name field", "wpspace"); ?>';
+    empt_mail = '<?php _e("Too short (or empty) email address", "wpspace"); ?>';
+    to_lng_mail = '<?php _e("Too long email address", "wpspace"); ?>';
+    incor = '<?php _e("Incorrect email address", "wpspace"); ?>';
+    mes_empt = '<?php _e("message can not be empty", "wpspace"); ?>';
+    to_lng_mes = '<?php _e("Too long message", "wpspace"); ?>';
+
+    jQuery(document).ready(function()
+    {
+		setColorPicker('bg_col');
+	}); 
+
 </script>
 </body>
 </html>

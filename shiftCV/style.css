@@ -1,10 +1,10 @@
-﻿/*
-Theme Name: Tony Resume
+/*
+Theme Name: Shift CV
 Theme URI: http://wpspace.net/cv
-Author: Tony Joseph
-Author URI: http://www.smiletony.com/
-Description: (shared on weidea.net) ShiftCV is a multipurpose personal webiste that has big functional options! After you purchase this theme, with a pretty and convenient vCard, you become an owner of the full-fledged blog with a wide range of custom options. 
-Version: 1.2.1
+Author: wpspace
+Author URI: http://wpspace.net/
+Description: ShiftCV is a multipurpose personal webiste that has big functional options! After you purchase this theme, with a pretty and convenient vCard, you become an owner of the full-fledged blog with a wide range of custom options. 
+Version: 1.3.0
 License: GNU General Public License
 License URI: license.txt
 Tags: theme-options, full-width-template, flexible-width, sticky-post, black, white, threaded-comments, photoblogging, featured-images
@@ -43,6 +43,11 @@ body {
 	font-size: 14px;
 	line-height: 20px;
 	color: #646464;
+}
+body.image_bg {
+	background-repeat: no-repeat !important;
+	background-position: center 0 !important;
+	background-attachment: fixed !important;
 }
 a img {
 	border: none;
@@ -444,6 +449,24 @@ blockquote.sc_quote .quotes:before {
 	#header .social_links li.drb a {
 		background: url(images/icon-dribble.png) center 0 no-repeat;
 	}
+	#header .social_links li.skp a {
+		background: url(images/icon-skype.png) center 0 no-repeat;
+	}
+	#header .social_links li.pin a {
+		background: url(images/icon-pinterest.png) center 0 no-repeat;
+	}
+	#header .social_links li.xing a {
+		background: url(images/icon-xing.png) center 0 no-repeat;
+	}
+	#header .social_links li.slide_share a {
+		background: url(images/icon-slideshare.png) center 0 no-repeat;
+	}
+	#header .social_links li.xing a {
+		background: url(images/icon-xing.png) center 0 no-repeat;
+	}
+	#header .social_links li.slide_share a {
+		background: url(images/icon-slideshare.png) center 0 no-repeat;
+	}
 
 #header .social_links li.fb a:hover {
 	background-image: url(images/icon-facebook-dark.png);
@@ -465,6 +488,18 @@ blockquote.sc_quote .quotes:before {
 }
 #header .social_links li.vim a:hover {
 	background-image: url(images/icon-vimeo-dark.png);
+}
+#header .social_links li.skp a:hover {
+	background: url(images/icon-skype-dark.png) center 0 no-repeat;
+}
+#header .social_links li.pin a:hover {
+	background: url(images/icon-pinterest-dark.png) center 0 no-repeat;
+}
+#header .social_links li.xing a:hover {
+	background: url(images/icon-xing-dark.png) center 0 no-repeat;
+}
+#header .social_links li.slide_share a:hover {
+	background: url(images/icon-slideshare-dark.png) center 0 no-repeat;
 }
 /* Main */
 #resume {
@@ -1420,12 +1455,23 @@ article.post .tags_section #post_tags li a:hover {
 	width: 100%;
 	content: "";
 }
-.blog_section article.post.format-link {
+.blog_section article.post.format-link,
+.blog_section article.post.format-quote,
+.blog_section article.post.format-status {
 	border: 2px solid #e5e5e5;
 	margin: 6px 31px 20px 30px;
 	padding: 15px 19px 16px;
 }
-.single .blog_section article.post.format-link {
+.blog_section article.post.format-status .text,
+.blog_section article.post.format-quote .text {
+	font-size: 18px;
+	line-height: 20px;
+	color: #646464;
+	font-style: italic;
+}
+.single .blog_section article.post.format-link,
+.single .blog_section article.post.format-status,
+.single .blog_section article.post.format-quote {
 	padding: 0;
 	border: none;
 }
@@ -2216,7 +2262,7 @@ footer#footer .footer_copyright {
 }
 #reply-title {
 	background: none repeat scroll 0 0 #373737;
-    border-radius: 3px 0 0 3px;
+    border-radius: 5px 0 0 5px;
     color: #FFFFFF;
     font-size: 14px;
     font-weight: 700;
@@ -2533,5 +2579,177 @@ div.pp_pic_holder {
 }
 #searchform input {
 	vertical-align: top;
+}
+#scrollTo {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -470px;
+	display: block;
+	min-width: 60px;
+	background: #b1b1b1;
+	height: 60px;
+	color: #fff;
+	text-decoration: none;
+	overflow: hidden;
+}
+#scrollTo .icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 28px;
+	line-height: 57px;
+	background: #b1b1b1;
+	width: 60px;
+	text-align: center;
+	height: 60px;
+}
+#scrollTo .label {
+	font-size: 18px;
+	line-height: 24px;
+	padding: 18px 28px 0 90px;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: block;
+	margin-left: -999px;
+	-webkit-transition: all ease .9s;
+	-moz-transition: all ease .9s;
+	-ms-transition: all ease .9s;
+	-o-transition: all ease .9s;
+	transition: all ease .9s;
+}
+#scrollTo:hover .label {
+	margin-left: 0;
+	-webkit-transition: all ease .4s;
+	-moz-transition: all ease .4s;
+	-ms-transition: all ease .4s;
+	-o-transition: all ease .4s;
+	transition: all ease .4s;
+}
+
+.patterns_select {
+	clear: both;
+	padding-bottom: 4px;
+	overflow: hidden;
+}
+.patterns_select li {
+	margin-left: 10px;
+	float: left;
+	width: 25px;
+	-webkit-box-shadow: 3px 4px 0 0 rgba(0,0,0,.1);
+	-moz-box-shadow: 3px 4px 0 0 rgba(0,0,0,.1);
+	box-shadow: 3px 4px 0 0 rgba(0,0,0,.1);
+}
+.patterns_select li:first-child {
+	margin-left: 0;
+}
+.patterns_select li a {
+	height: 25px;
+	display: block;
+	overflow: hidden;
+}
+.patterns_select li a img {
+	width: 100%;
+	height: auto;
+}
+.bg_select {
+	clear: both;
+	overflow: hidden;
+	padding-bottom: 4px;
+}
+.bg_select li {
+	float: left;
+	width: 47px;
+	overflow: hidden;
+	margin-left: 12px;
+	-webkit-box-shadow: 3px 4px 0 0 rgba(0,0,0,.1);
+	-moz-box-shadow: 3px 4px 0 0 rgba(0,0,0,.1);
+	box-shadow: 3px 4px 0 0 rgba(0,0,0,.1);
+}
+.bg_select li:first-child {
+	margin-left: 0;
+}
+.bg_select li a {
+	display: block;
+	height: 25px;
+}
+.bg_select li a img {
+	width: 100%;
+	height: auto;
+}
+#opt_block {
+	position: fixed;
+	top: 200px;
+	right: -222px;
+	width: 222px;
+	background: #616161;
+}
+#opt_block ul {
+	list-style: none;
+}
+#opt_block .opt_row {
+	position: relative;
+	z-index: 10;
+	padding: 33px 28px 26px;
+	overflow: hidden;
+}
+#opt_block .opt_row h3 {
+	padding-top: 4px;
+	float: left;
+	color: #fff;
+	font-size: 12px;
+	line-height: 17px;
+	text-transform: uppercase;
+}
+#opt_block .opt_row h3 + div {
+	float: right;
+}
+#opt_block .opt_row.bg_color {
+	background: #525252;
+}
+#opt_block .opt_row.bg_pat {
+	padding: 15px 28px 19px;
+	background: #424242;
+}
+#opt_block .opt_row.bg_img {
+	padding: 15px 28px 19px;
+}
+#opt_block .opt_row.bg_pat h3 {
+	margin-bottom: 6px;
+}
+#opt_block .opt_row.bg_img {
+	background: #303030;
+}
+#opt_block .opt_header {
+	position: relative;
+	z-index: 4;
+	background: #666666;
+	height: 40px;
+	-webkit-box-shadow: -37px 4px 0 0 rgba(0,0,0,.2);
+	-moz-box-shadow: -37px 4px 0 0 rgba(0,0,0,.2);
+	box-shadow: -37px 4px 0 0 rgba(0,0,0,.2);
+}
+#opt_block .opt_header span {
+	cursor: pointer;
+	background: url(images/settings_icon.png) center center no-repeat #666666;
+	display: block;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	margin-left: -40px;
+	overflow: hidden;
+}
+.colorpicker {
+	z-index: 999;
+}
+#opt_block .colorSelector {
+	background-image: url(images/picker.gif);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	-webkit-box-shadow: 3px 4px 0 0 rgba(0,0,0,.1);
+	-moz-box-shadow: 3px 4px 0 0 rgba(0,0,0,.1);
+	box-shadow: 3px 4px 0 0 rgba(0,0,0,.1);
+	width: 25px;
+	height: 24px;
 }
 /********************************************/
