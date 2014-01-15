@@ -31,19 +31,19 @@
 	<div class="opt_row bg_pat">
 		<h3>Background Pattern:</h3>
 		<ul class="patterns_select">
-			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/patterns/pattern1.png"></a></li>
-			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/patterns/pattern2.png"></a></li>
-			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/patterns/pattern3.jpg"></a></li>
-			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/patterns/pattern4.png"></a></li>
-			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/patterns/pattern5.png"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern1.png"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern2.png"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern3.jpg"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern4.png"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern5.png"></a></li>
 		</ul>
 	</div>
 	<div class="opt_row bg_img">
 		<h3>Background Image:</h3>
 		<ul class="bg_select">
-			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/bg1.jpg"></a></li>
-			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/bg2.jpg"></a></li>
-			<li><a href="#"><img alt="" src="http://shiftcv.wpspace.net/wp-content/themes/cv/images/bg3.jpg"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/bg1.jpg"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/bg2.jpg"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/bg3.jpg"></a></li>
 		</ul>
 	</div>
 </div>
