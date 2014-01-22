@@ -251,27 +251,27 @@ $theme_options[] = array( "name" => __('Facebook',  'wpspace'),
 			"std" => "",
 			"type" => "text");
 
-$theme_options[] = array( "name" => __('Vimeo',  'wpspace'),
-			"desc" => "Link to your Vimeo profile",
-			"id" => $shortname . '_' . "social_links_vimeo",
+$theme_options[] = array( "name" => __('Tencent Weibo',  'wpspace'),
+			"desc" => "Link to your Tencent Weibo profile",
+			"id" => $shortname . '_' . "social_links_tencentweibo",
 			"std" => "",
 			"type" => "text");
 
-$theme_options[] = array( "name" => __('Google Plus',  'wpspace'),
-			"desc" => "Link to your gplus profile",
-			"id" => $shortname . '_' . "social_links_gplus",
+$theme_options[] = array( "name" => __('Sina Weibo',  'wpspace'),
+			"desc" => "Link to your Sina Weibo profile",
+			"id" => $shortname . '_' . "social_links_sinaweibo",
 			"std" => "",
 			"type" => "text");
 
-$theme_options[] = array( "name" => __('Dribbble',  'wpspace'),
-			"desc" => "Link to your Dribbble profile",
-			"id" => $shortname . '_' . "social_links_dribble",
+$theme_options[] = array( "name" => __('Tencent Weixin',  'wpspace'),
+			"desc" => "Link to your Tencent Weixin profile",
+			"id" => $shortname . '_' . "social_links_tencentweixin",
 			"std" => "",
 			"type" => "text");
 
-$theme_options[] = array( "name" => __('LinkedIn',  'wpspace'),
-			"desc" => "Link to your LinkedIn profile",
-			"id" => $shortname . '_' . "social_links_linkedin",
+$theme_options[] = array( "name" => __('Tencent Qzone',  'wpspace'),
+			"desc" => "Link to your Tencent Qzone profile",
+			"id" => $shortname . '_' . "social_links_tencentqzone",
 			"std" => "",
 			"type" => "text");
 

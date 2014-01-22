@@ -19,36 +19,6 @@
 
 <?php wp_footer(); ?>
 
-<!-- 自定义背景START -->
-<div id="opt_block" style="margin-right: 222px;">
-	<div class="opt_header">
-		<span class="vis"></span>
-	</div>
-	<div class="opt_row bg_color">
-		<h3>background color:</h3>
-		<div class="colorSelector" id="bg_col"></div>
-	</div>
-	<div class="opt_row bg_pat">
-		<h3>Background Pattern:</h3>
-		<ul class="patterns_select">
-			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern1.png"></a></li>
-			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern2.png"></a></li>
-			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern3.jpg"></a></li>
-			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern4.png"></a></li>
-			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern5.png"></a></li>
-		</ul>
-	</div>
-	<div class="opt_row bg_img">
-		<h3>Background Image:</h3>
-		<ul class="bg_select">
-			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/bg1.jpg"></a></li>
-			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/bg2.jpg"></a></li>
-			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/bg3.jpg"></a></li>
-		</ul>
-	</div>
-</div>
-<!-- 自定义背景END -->
-
 <a href="#" id="toTop"></a>
 
 <script type="text/javascript">
@@ -103,5 +73,37 @@
 	}); 
 
 </script>
+
+
+<!-- 自定义背景START -->
+<div id="opt_block">
+	<div class="opt_header">
+		<span></span>
+	</div>
+	<div class="opt_row bg_color">
+		<h3>background color:</h3>
+		<div class="colorSelector" id="bg_col"></div>
+	</div>
+	<div class="opt_row bg_pat">
+		<h3>Background Pattern:</h3>
+		<ul class="patterns_select">
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern1.png"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern2.png"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern3.jpg"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern4.png"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/patterns/pattern5.png"></a></li>
+		</ul>
+	</div>
+	<div class="opt_row bg_img">
+		<h3>Background Image:</h3>
+		<ul class="bg_select">
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/backgrounds/bg1.jpg"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/backgrounds/bg2.jpg"></a></li>
+			<li><a href="#"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/backgrounds/bg3.jpg"></a></li>
+		</ul>
+	</div>
+</div>
+<!-- 自定义背景END -->
+
 </body>
 </html>

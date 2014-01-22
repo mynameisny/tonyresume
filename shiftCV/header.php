@@ -66,25 +66,26 @@ global $theme_custom_settings;
         <?php do_action( 'before' ); ?>
         <header id="header" class="site_header" role="banner">
 			<?php
-			if (get_theme_option("social_links_in_header") == "true" ) { 
+			if (get_theme_option("social_links_in_header") == "true" ) 
+			{ 
 				$twitter = get_theme_option("social_links_twitter");
 				$facebook = get_theme_option("social_links_facebook");
 				$rss = get_theme_option("social_links_rss");
-				$gplus = get_theme_option("social_links_gplus");
-				$vimeo = get_theme_option("social_links_vimeo");
-				$youtube = get_theme_option("social_links_youtube");
-				$dribble = get_theme_option("social_links_dribble");
-				$linkedin = get_theme_option("social_links_linkedin");
+				$tencent_weibo = get_theme_option("social_links_tencentweibo");
+				$sina_weibo = get_theme_option("social_links_sinaweibo");
+				$tencent_weixin = get_theme_option("social_links_tencentweixin");
+				$tencent_qzone = get_theme_option("social_links_tencentqzone");
+				$tencent_pengyou = get_theme_option("social_links_tencentpengyou");
 			?>
 				<div class="social_links">
 					<ul>
 						<?php if ($rss) { ?><li class="rss"><a target="_blank" href="<?php echo $rss; ?>"><?php _e('RSS', 'wpspace'); ?></a></li><?php } ?>
 						<?php if ($facebook) { ?><li class="fb"><a target="_blank" href="<?php echo $facebook; ?>"><?php _e('Facebook', 'wpspace'); ?></a></li><?php } ?>
 						<?php if ($twitter) { ?><li class="tw"><a target="_blank" href="<?php echo $twitter; ?>"><?php _e('Twitter', 'wpspace'); ?></a></li><?php } ?>
-						<?php if ($gplus) { ?><li class="gplus"><a target="_blank" href="<?php echo $gplus; ?>"><?php _e('Google+', 'wpspace'); ?></a></li><?php } ?>
-						<?php if ($linkedin) { ?><li class="lnkd"><a target="_blank" href="<?php echo $linkedin; ?>"><?php _e('Linkedin', 'wpspace'); ?></a></li><?php } ?>
-						<?php if ($dribble) { ?><li class="drb"><a target="_blank" href="<?php echo $dribble; ?>"><?php _e('Dribbble', 'wpspace'); ?></a></li><?php } ?>
-						<?php if ($vimeo) { ?><li class="vim"><a target="_blank" href="<?php echo $vimeo; ?>" class="vim"><?php _e('Vimeo', 'wpspace'); ?></a></li><?php } ?>
+						<?php if ($tencent_weibo) { ?><li class="tencent_weibo"><a target="_blank" href="<?php echo $tencent_weibo; ?>"><?php _e('Tencent Weibo', 'wpspace'); ?></a></li><?php } ?>
+						<?php if ($sina_weibo) { ?><li class="sina_weibo"><a target="_blank" href="<?php echo $sina_weibo; ?>"><?php _e('Sina Weibo', 'wpspace'); ?></a></li><?php } ?>
+						<?php if ($tencent_weixin) { ?><li class="tencent_weixin"><a target="_blank" href="<?php echo $tencent_weixin; ?>"><?php _e('Tencent Weixin', 'wpspace'); ?></a></li><?php } ?>
+						<?php if ($tencent_qzone) { ?><li class="tencent_qzone"><a target="_blank" href="<?php echo $tencent_qzone; ?>" class="tencent_qzone"><?php _e('Tencent Qzone', 'wpspace'); ?></a></li><?php } ?>
 					</ul>
 				</div>
 			<?php } ?>

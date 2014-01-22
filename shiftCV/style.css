@@ -442,6 +442,11 @@ blockquote.sc_quote .quotes:before {
 	#header .social_links li.drb {
 		margin-left: 16px;
 	}
+	/* Edit By Tony START */
+	#header .social_links li.tencent_qzone {
+		margin-left: 16px;
+	}
+	/* Edit By Tony END */
 	#header .social_links li.vim a {
 		background: url(images/icon-vimeo.png) center 0 no-repeat;
 	}
@@ -469,6 +474,20 @@ blockquote.sc_quote .quotes:before {
 	#header .social_links li.slide_share a {
 		background: url(images/icon-slideshare.png) center 0 no-repeat;
 	}
+	/* Edit By Tony START */
+	#header .social_links li.tencent_weibo a {
+		background: url(images/icon-tencentweibo.png) center 0 no-repeat;
+	}
+	#header .social_links li.sina_weibo a {
+		background: url(images/icon-sinaweibo.png) center 0 no-repeat;
+	}
+	#header .social_links li.tencent_weixin a {
+		background: url(images/icon-tencentweixin.png) center 0 no-repeat;
+	}
+	#header .social_links li.tencent_qzone a {
+		background: url(images/icon-tencentqzone.png) center 0 no-repeat;
+	}
+	/* Edit By Tony END */
 
 #header .social_links li.fb a:hover {
 	background-image: url(images/icon-facebook-dark.png);
@@ -503,6 +522,24 @@ blockquote.sc_quote .quotes:before {
 #header .social_links li.slide_share a:hover {
 	background: url(images/icon-slideshare-dark.png) center 0 no-repeat;
 }
+#header .social_links li.gplus a:hover {
+	background-image: url(images/icon-gplus-dark.png);
+}
+/* Edit By Tony START */
+#header .social_links li.tencent_weibo a:hover {
+	background-image: url(images/icon-tencentweibo-dark.png);
+}
+#header .social_links li.sina_weibo a:hover {
+	background-image: url(images/icon-sinaweibo-dark.png);
+}
+#header .social_links li.tencent_weixin a:hover {
+	background-image: url(images/icon-tencentweixin-dark.png);
+}
+#header .social_links li.tencent_qzone a:hover {
+	background-image: url(images/icon-tencentqzone-dark.png);
+}
+/* Edit By Tony END */
+
 /* Main */
 #resume {
 	position: relative;
@@ -2683,12 +2720,21 @@ div.pp_pic_holder {
 	width: 100%;
 	height: auto;
 }
+/*
 #opt_block {
 	position: fixed;
 	top: 200px;
 	right: -222px;
 	width: 222px;
 	background: #616161;
+}
+*/
+#opt_block {
+    background: none repeat scroll 0 0 #616161;
+    position: fixed;
+    right: -222px;
+    top: 200px;
+    width: 222px;
 }
 #opt_block ul {
 	list-style: none;

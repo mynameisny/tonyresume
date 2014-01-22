@@ -162,6 +162,20 @@ body.dark {
 .dark #header .social_links li.slide_share a {
 	background: url(../images/icon-slideshare-dark.png) center 0 no-repeat;
 }
+/* Edit By Tony START */
+#header .social_links li.tencent_weibo a {
+	background: url(../images/icon-tencentweibo.png) center 0 no-repeat;
+}
+#header .social_links li.sina_weibo a {
+	background: url(../images/icon-sinaweibo.png) center 0 no-repeat;
+}
+#header .social_links li.tencent_weixin a {
+	background: url(../images/icon-tencentweixin.png) center 0 no-repeat;
+}
+#header .social_links li.tencent_qzone a {
+	background: url(../images/icon-tencentqzone.png) center 0 no-repeat;
+}
+/* Edit By Tony END */
 
 .dark #header .social_links li.fb a:hover {
 	background-image: url(../images/icon-facebook.png);
@@ -196,6 +210,21 @@ body.dark {
 .dark #header .social_links li.slide_share a:hover {
 	background: url(../images/icon-slideshare.png) center 0 no-repeat;
 }
+/* Edit By Tony START */
+#header .social_links li.tencent_weibo a:hover {
+	background-image: url(../images/icon-tencentweibo-dark.png);
+}
+#header .social_links li.sina_weibo a:hover {
+	background-image: url(../images/icon-sinaweibo-dark.png);
+}
+#header .social_links li.tencent_weixin a:hover {
+	background-image: url(../images/icon-tencentweixin-dark.png);
+}
+#header .social_links li.tencent_qzone a:hover {
+	background-image: url(../images/icon-tencentqzone-dark.png);
+}
+/* Edit By Tony END */
+
 .dark ul.breadcrumbs {
 	background: #2c2c2c;
 }
