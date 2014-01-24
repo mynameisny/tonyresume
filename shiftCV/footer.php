@@ -70,10 +70,8 @@
     jQuery(document).ready(function()
     {
 		setColorPicker('bg_col');
-	}); 
-
+	});
 </script>
-
 
 <!-- 自定义背景START -->
 <div id="opt_block">
