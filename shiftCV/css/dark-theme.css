@@ -108,16 +108,18 @@ body.dark {
 .dark input[type="text"],
 .dark input[type="search"],
 .dark input[type="password"],
+/* == Edit By Tony START == */
 .dark textarea {
-	/*edit by tony
+	/*
 	background: #1e1e1e;
 	border: 2px solid #3b3b3b;
 	color: #fff;
 	*/
 	background: none repeat scroll 0 0 #1E1E1E;
-    border: 2px solid #3B3B3B;
-    color: #FFFFFF;
+  border: 2px solid #3B3B3B;
+  color: #FFFFFF;
 }
+/* == Edit By Tony END == */
 .dark .sc_contact_form form .field label {
 	color: #878787;
 }
@@ -129,14 +131,15 @@ body.dark {
 .dark .sc_contact_form .enter:hover {
 	background: none;
 }
+
+.dark #header .social_links li.rss a {
+	background-image: url(../images/icon-feed-dark.png);
+}
 .dark #header .social_links li.fb a {
 	background-image: url(../images/icon-facebook-dark.png);
 }
 .dark #header .social_links li.tw a {
 	background-image: url(../images/icon-twitter-dark.png);
-}
-.dark #header .social_links li.rss a {
-	background-image: url(../images/icon-feed-dark.png);
 }
 .dark #header .social_links li.gplus a {
 	background-image: url(../images/icon-gplus-dark.png);
@@ -150,11 +153,11 @@ body.dark {
 .dark #header .social_links li.vim a {
 	background-image: url(../images/icon-vimeo-dark.png);
 }
-.dark #header .social_links li.skp a {
-	background-image: url(../images/icon-skype-dark.png);
-}
 .dark #header .social_links li.pin a {
 	background-image: url(../images/icon-pinterest-dark.png);
+}
+.dark #header .social_links li.skp a {
+	background-image: url(../images/icon-skype-dark.png);
 }
 .dark #header .social_links li.xing a {
 	background: url(../images/icon-xing-dark.png) center 0 no-repeat;
@@ -162,29 +165,30 @@ body.dark {
 .dark #header .social_links li.slide_share a {
 	background: url(../images/icon-slideshare-dark.png) center 0 no-repeat;
 }
-/* Edit By Tony START */
-#header .social_links li.tencent_weibo a {
-	background: url(../images/icon-tencentweibo.png) center 0 no-repeat;
+/* == Edit By Tony START == */
+.dark #header .social_links li.tencent_weibo a {
+	background-image: url(../images/icon-tencentweibo-dark.png);
 }
-#header .social_links li.sina_weibo a {
-	background: url(../images/icon-sinaweibo.png) center 0 no-repeat;
+.dark #header .social_links li.sina_weibo a {
+	background-image: url(../images/icon-sinaweibo-dark.png);
 }
-#header .social_links li.tencent_weixin a {
-	background: url(../images/icon-tencentweixin.png) center 0 no-repeat;
+.dark #header .social_links li.tencent_weixin a {
+	background-image: url(../images/icon-tencentweixin-dark.png);
 }
-#header .social_links li.tencent_qzone a {
-	background: url(../images/icon-tencentqzone.png) center 0 no-repeat;
+.dark #header .social_links li.tencent_qzone a {
+	background-image: url(../images/icon-tencentqzone-dark.png);
 }
-/* Edit By Tony END */
+/* == Edit By Tony END == */
 
+
+.dark #header .social_links li.rss a:hover {
+	background-image: url(../images/icon-feed.png);
+}
 .dark #header .social_links li.fb a:hover {
 	background-image: url(../images/icon-facebook.png);
 }
 .dark #header .social_links li.tw a:hover {
 	background-image: url(../images/icon-twitter.png);
-}
-.dark #header .social_links li.rss a:hover {
-	background-image: url(../images/icon-feed.png);
 }
 .dark #header .social_links li.gplus a:hover {
 	background-image: url(../images/icon-gplus.png);
@@ -198,11 +202,11 @@ body.dark {
 .dark #header .social_links li.vim a:hover {
 	background-image: url(../images/icon-vimeo.png);
 }
-.dark #header .social_links li.skp a:hover {
-	background-image: url(../images/icon-skype.png);
-}
 .dark #header .social_links li.pin a:hover {
 	background-image: url(../images/icon-pinterest.png);
+}
+.dark #header .social_links li.skp a:hover {
+	background-image: url(../images/icon-skype.png);
 }
 .dark #header .social_links li.xing a:hover {
 	background: url(../images/icon-xing.png) center 0 no-repeat;
@@ -210,20 +214,21 @@ body.dark {
 .dark #header .social_links li.slide_share a:hover {
 	background: url(../images/icon-slideshare.png) center 0 no-repeat;
 }
-/* Edit By Tony START */
-#header .social_links li.tencent_weibo a:hover {
-	background-image: url(../images/icon-tencentweibo-dark.png);
+/* == Edit By Tony START == */
+.dark #header .social_links li.tencent_weibo a:hover {
+	background-image: url(../images/icon-tencentweibo.png);
 }
-#header .social_links li.sina_weibo a:hover {
-	background-image: url(../images/icon-sinaweibo-dark.png);
+.dark #header .social_links li.sina_weibo a:hover {
+	background-image: url(../images/icon-sinaweibo.png);
 }
-#header .social_links li.tencent_weixin a:hover {
-	background-image: url(../images/icon-tencentweixin-dark.png);
+.dark #header .social_links li.tencent_weixin a:hover {
+	background-image: url(../images/icon-tencentweixin.png);
 }
-#header .social_links li.tencent_qzone a:hover {
-	background-image: url(../images/icon-tencentqzone-dark.png);
+.dark #header .social_links li.rss tencent_qzone:hover {
+	background-image: url(../images/icon-tencentqzone.png);
 }
-/* Edit By Tony END */
+/* == Edit By Tony END == */
+
 
 .dark ul.breadcrumbs {
 	background: #2c2c2c;
