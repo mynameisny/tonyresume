@@ -67,9 +67,13 @@ function getTaxonomiesByPostId($post_id = 0, $tax_types = array('post_format')) 
 
 
 // Return taxonomies objects by post type
-function getTaxonomiesByPostType($post_types = array('post'), $tax_types = array('post_format')) {
+function getTaxonomiesByPostType($post_types = array('post'), $tax_types = array('post_format')) 
+{
 	global $wpdb, $wp_query;
-	if (!$post_types) $post_types = array('post');
+	if (!$post_types)
+	{
+		$post_types = array('post');	
+	}
 	$sql = "SELECT terms.*, tax.taxonomy, tax.parent, tax.count, posts.post_type"
 			. " FROM $wpdb->term_relationships AS rel"
 			. " LEFT JOIN {$wpdb->term_taxonomy} AS tax ON rel.term_taxonomy_id=tax.term_taxonomy_id"
@@ -77,7 +81,8 @@ function getTaxonomiesByPostType($post_types = array('post'), $tax_types = array
 			. " LEFT JOIN {$wpdb->posts} AS posts ON rel.object_id=posts.id"
 			. " WHERE posts.post_type IN ('" . join("','", $post_types) . "')"
 				. " AND tax.taxonomy IN ('" . join("','", $tax_types) . "')"
-			. " ORDER BY terms.name";
+			//*--Edit By Tony.--* . " ORDER BY terms.name";
+			. " ORDER BY terms.term_id";
 	$taxes = $wpdb->get_results($sql, ARRAY_A);
 	$result = array();
 	$used = array();
