@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: tonyresume\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-16 16:56+0800\n"
-"PO-Revision-Date: 2014-01-16 16:57+0800\n"
+"PO-Revision-Date: 2014-02-19 00:46+0800\n"
 "Last-Translator: Tony Joseph <mynameisny@qq.com>\n"
 "Language-Team: smiletony.com <mynameisny@qq.com>\n"
 "MIME-Version: 1.0\n"
@@ -306,7 +306,7 @@ msgstr "网址"
 
 #: ../shiftCV/template-resume.php:25
 msgid "Blog"
-msgstr "博客"
+msgstr "Blog"
 
 #: ../shiftCV/template-resume.php:107
 msgid "Print"
@@ -314,7 +314,7 @@ msgstr "Print"
 
 #: ../shiftCV/template-resume.php:109
 msgid "Download"
-msgstr "下载"
+msgstr "Download"
 
 #: ../shiftCV/template-resume.php:335
 msgid "Contact info"

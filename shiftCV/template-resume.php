@@ -21,8 +21,13 @@ $mult = min(2, max(1, get_theme_option("retina_ready")));
 			<section id="profile" class="section profile_section first odd">
 				<?php
 					$blog_page = getTemplatePageId('blog');
-					if ($blog_page) { ?>
-						<a href="<?php echo get_permalink($blog_page); ?>" id="blog_page_link"><span class="icon-pencil icon"></span><span class="label"><?php echo __('Blog', 'wpspace') ?></span></a>
+					if ($blog_page >= 0) 
+					{ 
+				?>
+						<a href="<?php echo get_permalink($blog_page); ?>" id="blog_page_link">
+							<span class="icon-pencil icon"></span>
+							<span class="label"><?php echo __('Blog', 'wpspace') ?></span>
+						</a>
 				<?php 								
 					}
 				?>
