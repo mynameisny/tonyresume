@@ -2728,6 +2728,7 @@ div.pp_pic_holder {
 	right: -222px;
 	width: 222px;
 	background: #616161;
+	z-index: 9999999;
 }
 #opt_block ul {
 	list-style: none;
