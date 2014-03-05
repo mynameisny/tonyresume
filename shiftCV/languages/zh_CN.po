@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tonyresume\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-16 16:56+0800\n"
-"PO-Revision-Date: 2014-02-19 00:46+0800\n"
+"POT-Creation-Date: 2014-03-05 15:05+0800\n"
+"PO-Revision-Date: 2014-03-05 15:06+0800\n"
 "Last-Translator: Tony Joseph <mynameisny@qq.com>\n"
 "Language-Team: smiletony.com <mynameisny@qq.com>\n"
 "MIME-Version: 1.0\n"
@@ -40,14 +40,14 @@ msgstr "你的消息"
 
 #: ../shiftCV/comments.php:65
 #: ../shiftCV/template-print.php:57
-#: ../shiftCV/template-resume.php:63
+#: ../shiftCV/template-resume.php:68
 msgid "Name"
 msgstr "姓名"
 
 #: ../shiftCV/comments.php:67
 #: ../shiftCV/template-print.php:69
-#: ../shiftCV/template-resume.php:75
-#: ../shiftCV/template-resume.php:344
+#: ../shiftCV/template-resume.php:80
+#: ../shiftCV/template-resume.php:349
 msgid "Email"
 msgstr "电子邮箱"
 
@@ -72,32 +72,32 @@ msgstr "之前"
 msgid "Your comment is awaiting moderation."
 msgstr "您的评论正在等待审核。"
 
-#: ../shiftCV/footer.php:91
+#: ../shiftCV/footer.php:61
 msgid "Name field can not be empty"
 msgstr "名称字段不能为空"
 
-#: ../shiftCV/footer.php:92
-#: ../shiftCV/footer.php:93
+#: ../shiftCV/footer.php:62
+#: ../shiftCV/footer.php:63
 msgid "Too long name field"
 msgstr "名称字段过长"
 
-#: ../shiftCV/footer.php:94
+#: ../shiftCV/footer.php:64
 msgid "Too short (or empty) email address"
 msgstr "电子邮箱地址太短（或者为空）"
 
-#: ../shiftCV/footer.php:95
+#: ../shiftCV/footer.php:65
 msgid "Too long email address"
 msgstr "电子邮件地址过长"
 
-#: ../shiftCV/footer.php:96
+#: ../shiftCV/footer.php:66
 msgid "Incorrect email address"
 msgstr "电子邮件地址不正确"
 
-#: ../shiftCV/footer.php:97
+#: ../shiftCV/footer.php:67
 msgid "message can not be empty"
 msgstr "消息不能为空"
 
-#: ../shiftCV/footer.php:98
+#: ../shiftCV/footer.php:68
 msgid "Too long message"
 msgstr "消息过长"
 
@@ -206,33 +206,33 @@ msgstr "Light"
 msgid "Version"
 msgstr "Version"
 
-#: ../shiftCV/header.php:82
+#: ../shiftCV/header.php:83
 msgid "RSS"
 msgstr "RSS"
 
-#: ../shiftCV/header.php:83
+#: ../shiftCV/header.php:84
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../shiftCV/header.php:84
+#: ../shiftCV/header.php:85
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../shiftCV/header.php:85
+#: ../shiftCV/header.php:86
 msgid "Tencent Weibo"
 msgstr "腾讯微博"
 
-#: ../shiftCV/header.php:86
+#: ../shiftCV/header.php:87
 msgid "Sina Weibo"
 msgstr "新浪微博"
 
-#: ../shiftCV/header.php:87
+#: ../shiftCV/header.php:88
 msgid "Tencent Weixin"
 msgstr "腾讯微信"
 
-#: ../shiftCV/header.php:88
-msgid "Tencent Qzone"
-msgstr "QQ空间"
+#: ../shiftCV/header.php:89
+msgid "GitHub"
+msgstr "GitHub"
 
 #: ../shiftCV/single.php:42
 #: ../shiftCV/template-blog.php:43
@@ -257,7 +257,7 @@ msgid "Related posts"
 msgstr "相关文章"
 
 #: ../shiftCV/template-blog.php:89
-#: ../shiftCV/template-resume.php:169
+#: ../shiftCV/template-resume.php:174
 msgid "<span class=\"readmore\">Read more</span>"
 msgstr "<span class=\"readmore\">阅读更多</span>"
 
@@ -282,45 +282,45 @@ msgid "Sorry, but nothing matched your search terms. Please try again with some 
 msgstr "抱歉,没有符合您的搜索条件。请再次尝试一些不同的关键词。"
 
 #: ../shiftCV/template-print.php:60
-#: ../shiftCV/template-resume.php:66
+#: ../shiftCV/template-resume.php:71
 msgid "Date of birth"
 msgstr "出生日期"
 
 #: ../shiftCV/template-print.php:63
-#: ../shiftCV/template-resume.php:69
-#: ../shiftCV/template-resume.php:338
+#: ../shiftCV/template-resume.php:74
+#: ../shiftCV/template-resume.php:343
 msgid "Address"
 msgstr "地址"
 
 #: ../shiftCV/template-print.php:66
-#: ../shiftCV/template-resume.php:72
-#: ../shiftCV/template-resume.php:341
+#: ../shiftCV/template-resume.php:77
+#: ../shiftCV/template-resume.php:346
 msgid "Phone"
 msgstr "电话号码"
 
 #: ../shiftCV/template-print.php:72
-#: ../shiftCV/template-resume.php:78
-#: ../shiftCV/template-resume.php:347
+#: ../shiftCV/template-resume.php:83
+#: ../shiftCV/template-resume.php:352
 msgid "Website"
 msgstr "网址"
 
-#: ../shiftCV/template-resume.php:25
+#: ../shiftCV/template-resume.php:29
 msgid "Blog"
 msgstr "Blog"
 
-#: ../shiftCV/template-resume.php:107
+#: ../shiftCV/template-resume.php:112
 msgid "Print"
 msgstr "Print"
 
-#: ../shiftCV/template-resume.php:109
+#: ../shiftCV/template-resume.php:114
 msgid "Download"
 msgstr "Download"
 
-#: ../shiftCV/template-resume.php:335
+#: ../shiftCV/template-resume.php:340
 msgid "Contact info"
 msgstr "联络信息"
 
-#: ../shiftCV/template-resume.php:360
+#: ../shiftCV/template-resume.php:365
 msgid "Let's keep in touch"
 msgstr "让我们保持联络"
 
@@ -735,127 +735,130 @@ msgstr "前一页"
 msgid "..."
 msgstr "..."
 
-#: ../shiftCV/includes/_wp_utils.php:147
+#: ../shiftCV/includes/_wp_utils.php:152
 msgid "Videos"
 msgstr "视频"
 
-#: ../shiftCV/includes/_wp_utils.php:150
+#: ../shiftCV/includes/_wp_utils.php:155
 msgid "Galleries"
 msgstr "画廊"
 
-#: ../shiftCV/includes/_wp_utils.php:185
+#: ../shiftCV/includes/_wp_utils.php:190
 msgid "Resume"
 msgstr "简历"
 
-#: ../shiftCV/includes/_wp_utils.php:188
+#: ../shiftCV/includes/_wp_utils.php:193
 msgid "Portfolio"
 msgstr "作品"
 
-#: ../shiftCV/includes/_wp_utils.php:191
+#: ../shiftCV/includes/_wp_utils.php:196
 msgid "Posts"
 msgstr "文章"
 
-#: ../shiftCV/includes/_wp_utils.php:199
+#: ../shiftCV/includes/_wp_utils.php:204
 #, php-format
 msgid "All %s"
 msgstr "全部 %s"
 
-#: ../shiftCV/includes/_wp_utils.php:278
-#: ../shiftCV/includes/_wp_utils.php:280
-#: ../shiftCV/includes/_wp_utils.php:300
+#: ../shiftCV/includes/_wp_utils.php:283
+#: ../shiftCV/includes/_wp_utils.php:285
+#: ../shiftCV/includes/_wp_utils.php:305
 #, php-format
 msgid "%s"
 msgstr "%s"
 
-#: ../shiftCV/includes/_wp_utils.php:278
+#: ../shiftCV/includes/_wp_utils.php:283
 msgid "All Resume"
 msgstr "全部简历"
 
-#: ../shiftCV/includes/_wp_utils.php:280
+#: ../shiftCV/includes/_wp_utils.php:285
 msgid "All Portfolio"
 msgstr "全部作品"
 
-#: ../shiftCV/includes/_wp_utils.php:282
+#: ../shiftCV/includes/_wp_utils.php:287
 msgid "All Videos"
 msgstr "全部视频"
 
-#: ../shiftCV/includes/_wp_utils.php:284
+#: ../shiftCV/includes/_wp_utils.php:289
 msgid "All Photos"
 msgstr "全部图片"
 
-#: ../shiftCV/includes/_wp_utils.php:286
+#: ../shiftCV/includes/_wp_utils.php:291
 msgid "All Posts"
 msgstr "全部文章"
 
-#: ../shiftCV/includes/_wp_utils.php:288
+#: ../shiftCV/includes/_wp_utils.php:293
 msgid "Author page"
 msgstr "作者页面"
 
-#: ../shiftCV/includes/_wp_utils.php:290
+#: ../shiftCV/includes/_wp_utils.php:295
 msgid "URL not found"
 msgstr "找不到URL"
 
-#: ../shiftCV/includes/_wp_utils.php:292
+#: ../shiftCV/includes/_wp_utils.php:297
 #, php-format
 msgid "Search Results for: %s"
 msgstr "%s的搜索结果"
 
-#: ../shiftCV/includes/_wp_utils.php:294
+#: ../shiftCV/includes/_wp_utils.php:299
 #, php-format
 msgid "Daily Archives: %s"
 msgstr "每日存档： %s"
 
-#: ../shiftCV/includes/_wp_utils.php:296
+#: ../shiftCV/includes/_wp_utils.php:301
 #, php-format
 msgid "Monthly Archives: %s"
 msgstr "月度存档： %s"
 
-#: ../shiftCV/includes/_wp_utils.php:298
+#: ../shiftCV/includes/_wp_utils.php:303
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr "年度存档： %s"
 
-#: ../shiftCV/includes/_wp_utils.php:302
+#: ../shiftCV/includes/_wp_utils.php:307
 #, php-format
 msgid "Tag: %s"
 msgstr "标记： %s"
 
-#: ../shiftCV/includes/_wp_utils.php:304
+#: ../shiftCV/includes/_wp_utils.php:309
 #, php-format
 msgid "Attachment: %s"
 msgstr "附件： %s"
 
-#: ../shiftCV/includes/_wp_utils.php:332
+#: ../shiftCV/includes/_wp_utils.php:337
 #, php-format
 msgid "Page <span>%s</span> of <span>%s</span>"
 msgstr "页 <span>%s</span> of <span>%s</span>"
 
-#: ../shiftCV/includes/_wp_utils.php:358
+#: ../shiftCV/includes/_wp_utils.php:363
 msgid "Post navigation"
 msgstr "文章导航"
 
-#: ../shiftCV/includes/_wp_utils.php:364
+#: ../shiftCV/includes/_wp_utils.php:369
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> 旧文章"
 
-#: ../shiftCV/includes/_wp_utils.php:367
+#: ../shiftCV/includes/_wp_utils.php:372
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "新文章 <span class=\"meta-nav\">&rarr;</span>"
 
-#: ../shiftCV/includes/_wp_utils.php:408
+#: ../shiftCV/includes/_wp_utils.php:413
 #, php-format
 msgid "Page %s"
 msgstr "页 %s"
 
-#: ../shiftCV/includes/_wp_utils.php:439
+#: ../shiftCV/includes/_wp_utils.php:444
 msgid "This post is password protected. To view it please enter your password inside the post."
 msgstr "这篇文章是被密码保护的。想要查看它，请输入你在文章中的密码。"
 
-#: ../shiftCV/includes/_wp_utils.php:826
-#: ../shiftCV/includes/_wp_utils.php:834
+#: ../shiftCV/includes/_wp_utils.php:831
+#: ../shiftCV/includes/_wp_utils.php:839
 #, php-format
 msgid "View posts for %1$s %2$s"
 msgstr "为 %1$s %2$s显示文章"
+
+#~ msgid "Tencent Qzone"
+#~ msgstr "QQ空间"
 
 #~ msgid "Google+"
 #~ msgstr "Google+"

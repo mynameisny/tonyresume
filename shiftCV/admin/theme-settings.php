@@ -269,9 +269,9 @@ $theme_options[] = array( "name" => __('Tencent Weixin',  'wpspace'),
 			"std" => "",
 			"type" => "text");
 
-$theme_options[] = array( "name" => __('Tencent Qzone',  'wpspace'),
-			"desc" => "Link to your Tencent Qzone profile",
-			"id" => $shortname . '_' . "social_links_tencentqzone",
+$theme_options[] = array( "name" => __('GitHub',  'wpspace'),
+			"desc" => "Link to your GitHub profile",
+			"id" => $shortname . '_' . "social_links_github",
 			"std" => "",
 			"type" => "text");
 

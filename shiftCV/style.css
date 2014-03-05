@@ -491,6 +491,9 @@ blockquote.sc_quote .quotes:before {
 	#header .social_links li.tencent_qzone a {
 		background: url(images/icon-tencentqzone.png) center 0 no-repeat;
 	}
+	#header .social_links li.github a {
+		background: url(images/icon-github.png) center 0 no-repeat;
+	}
 	/* == Edit By Tony END == */
 
 #header .social_links li.rss a:hover {
@@ -538,6 +541,9 @@ blockquote.sc_quote .quotes:before {
 }
 #header .social_links li.tencent_qzone a:hover {
 	background-image: url(images/icon-tencentqzone-dark.png);
+}
+#header .social_links li.github a:hover {
+	background-image: url(images/icon-github-dark.png);
 }
 /* == Edit By Tony END == */
 

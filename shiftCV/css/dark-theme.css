@@ -178,6 +178,9 @@ body.dark {
 .dark #header .social_links li.tencent_qzone a {
 	background-image: url(../images/icon-tencentqzone-dark.png);
 }
+.dark #header .social_links li.github a {
+	background-image: url(../images/icon-github-dark.png);
+}
 /* == Edit By Tony END == */
 
 
@@ -224,8 +227,14 @@ body.dark {
 .dark #header .social_links li.tencent_weixin a:hover {
 	background-image: url(../images/icon-tencentweixin.png);
 }
-.dark #header .social_links li.rss tencent_qzone:hover {
+.dark #header .social_links li.tencent_qzone a:hover {
 	background-image: url(../images/icon-tencentqzone.png);
+}
+.dark #header .social_links li.github a:hover {
+	background-image: url(../images/icon-github.png);
+}
+.dark #header .social_links li.rss a:hover {
+	background-image: url(../images/icon-feed.png);
 }
 /* == Edit By Tony END == */
 
