@@ -5,7 +5,8 @@
  * @package shift_cv
  */
 global $theme_custom_settings;
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -78,6 +79,11 @@ global $theme_custom_settings;
 				$tencent_pengyou = get_theme_option("social_links_tencentpengyou");
 				$github = get_theme_option("social_links_github");
 			?>
+			<?php
+				//Edit by Tony: 指定微信号在自定义界面内显示
+				$home = get_site_url();
+				$home .= (my_strpos($home, '?')===false ? '?' : '&') . 'custom=1';
+			?>
 				<div class="social_links">
 					<ul>
 						<?php if ($rss) { ?><li class="rss"><a target="_blank" href="<?php echo $rss; ?>"><?php _e('RSS', 'wpspace'); ?></a></li><?php } ?>
@@ -85,7 +91,8 @@ global $theme_custom_settings;
 						<?php if ($twitter) { ?><li class="tw"><a target="_blank" href="<?php echo $twitter; ?>"><?php _e('Twitter', 'wpspace'); ?></a></li><?php } ?>
 						<?php if ($tencent_weibo) { ?><li class="tencent_weibo"><a target="_blank" href="<?php echo $tencent_weibo; ?>"><?php _e('Tencent Weibo', 'wpspace'); ?></a></li><?php } ?>
 						<?php if ($sina_weibo) { ?><li class="sina_weibo"><a target="_blank" href="<?php echo $sina_weibo; ?>"><?php _e('Sina Weibo', 'wpspace'); ?></a></li><?php } ?>
-						<?php if ($tencent_weixin) { ?><li class="tencent_weixin"><a target="_blank" href="<?php echo $tencent_weixin; ?>"><?php _e('Tencent Weixin', 'wpspace'); ?></a></li><?php } ?>
+						<?php if ($tencent_weixin) { ?><li class="tencent_weixin"><a target="_blank" href=<?php echo $home; ?>><?php _e('Tencent Weixin', 'wpspace'); ?></a></li><?php } ?>
+						<!--<?php if ($tencent_weixin) { ?><li class="tencent_weixin"><a target="_blank" href="<?php echo $tencent_weixin; ?>"><?php _e('Tencent Weixin', 'wpspace'); ?></a></li><?php } ?>-->
 						<?php if ($github) { ?><li class="github"><a target="_blank" href="<?php echo $github; ?>"><?php _e('GitHub', 'wpspace'); ?></a></li><?php } ?>
 					</ul>
 				</div>
