@@ -322,7 +322,7 @@
 
         <footer>
             <p>
-                <strong>Welcome! </strong> Check out <a target="_blank" href="http://<?php echo $user_website; ?>"><?php echo $user_website; ?></a>, for more information about me! <span class="follow">And you may also <a target="_blank" href="<?php echo $tencent_weibo; ?>">@me</a> on Tencent Microblog.</span>
+                <strong>Welcome! </strong> Check out <a target="_self" href="<?php echo $user_website; ?>"><?php echo $user_website; ?></a>, for more information about me! <span class="follow">And you may also <a target="_blank" href="<?php echo $tencent_weibo; ?>">@me</a> on Tencent Microblog.</span>
             </p>
         </footer>
 
