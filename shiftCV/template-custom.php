@@ -270,13 +270,13 @@
                                 <a href="http://3333024.qzone.qq.com" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/qq.png" alt="QQ" height="32" width="32"> <strong>QQ</strong>3333024</a>
                             </li>
                             <li>
-                                <a href="<?php echo $rss; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/rss.png" alt="RSS" height="32" width="32"> <strong>RSS</strong><?php echo $rss; ?></a>
+                                <a href="<?php echo $rss; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/rss.png" alt="RSS" height="32" width="32"> <strong>RSS</strong><span><?php if (mb_strlen($rss, 'UTF-8') > 28){echo mb_substr($rss, 0, 28, 'utf-8')."...";}else{echo $rss;} ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo $github; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/github.png" alt="GitHub" height="32" width="32"> <strong>GitHub</strong><?php echo $github; ?></a>
+                                <a href="<?php echo $github; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/github.png" alt="GitHub" height="32" width="32"> <strong>GitHub</strong><?php if (mb_strlen($github, 'UTF-8') > 28){echo mb_substr($github, 0, 28, 'utf-8')."...";}else{echo $github;} ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo $facebook; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/facebook.png" alt="Facebook" height="32" width="32"> <strong>Facebook</strong><?php echo $facebook; ?></a>
+                                <a href="<?php echo $facebook; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/facebook.png" alt="Facebook" height="32" width="32"> <strong>Facebook</strong><?php if (mb_strlen($facebook, 'UTF-8') > 28){echo mb_substr($facebook, 0, 28, 'utf-8')."...";}else{echo $facebook;} ?></a>
                             </li>
                             <li>
                                 <a href="http://www.linkedin.com/pub/%E5%B0%BC-%E6%89%98/92/b50/552" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/linkedin.png" alt="LinkedIn" height="32" width="32"> <strong>LinkedIn</strong>http://www.linkedin.com/pub/..</a>
@@ -288,7 +288,7 @@
                                 <a href="https://secure.skype.com/portal/overview?skypename=live%3Amynameisny_1" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/skype.png" alt="Skype" height="32" width="32"> <strong>Skype</strong>mynameisny@qq.com</a>
                             </li>
                             <li>
-                                <a href="<?php echo $twitter; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/twitter.png" alt="Twitter" height="32" width="32"> <strong>Twitter</strong><?php echo $twitter; ?></a>
+                                <a href="<?php echo $twitter; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/twitter.png" alt="Twitter" height="32" width="32"> <strong>Twitter</strong><?php if (mb_strlen($twitter, 'UTF-8') > 28){echo mb_substr($twitter, 0, 28, 'utf-8')."...";}else{echo $twitter;} ?></a>
                             </li>
                         </ul>
                         <p> You can also find me on <a href="http://code.google.com/u/116603173758864997653/" class="external">Google Code</a> and more.</p>
