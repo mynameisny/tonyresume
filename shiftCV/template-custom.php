@@ -14,6 +14,33 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
+        <meta charset="<?php bloginfo( 'charset' ); ?>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
+        <link rel="profile" href="http://gmpg.org/xfn/11" />
+        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+        <?php if (($favicon = get_theme_option('favicon'))) { ?>
+            <link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo $favicon; ?>" />
+        <?php
+        }
+        ?>
+        <!--[if lt IE 9]>
+            <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <?php
+        // Theme customizer settings
+        $theme_custom_settings = array(
+            'theme_style' => getValueGPC('theme_style', get_theme_option('theme_style'))
+        );
+        $theme_custom_settings['theme_style'] = !isset($_GET['prn']) && my_strtolower($theme_custom_settings['theme_style']) == 'dark' ? 'dark' : 'light';
+        
+        // AJAX Queries setiings
+        global $ajax_nonce, $ajax_url;
+        $ajax_nonce = wp_create_nonce('ajax_nonce');
+        $ajax_url = admin_url('admin-ajax.php');
+        ?>
+        
+        <?php echo get_theme_option('tracking_code'); ?>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/template/custom.js"></script>
         <style type="text/css">
@@ -174,7 +201,11 @@
             }
             #container
             {
-                overflow:hidden;position:relative;width:1000px;margin:0 auto;padding-bottom:135px;
+                overflow:hidden;
+                position:relative;
+                width:1000px;
+                margin:0 auto;
+                padding-bottom:135px;
             }
             #contentWrapper
             {position:relative;overflow:hidden;width:558px;height:278px;margin:140px auto 0;padding:6px;background-color:#fff;border:1px solid #EEEEEE;box-shadow:1px 1px 2px #C1C1C1;}
@@ -212,9 +243,13 @@
             #addressDetails h3 a {color:#333;}
             #contact{background:url(<?php echo get_template_directory_uri(); ?>/images/vcard/feature-cloud.png) no-repeat right bottom;}
         </style>
+
     </head>
 
-    <body>
+    <body <?php body_class($theme_custom_settings['theme_style']); ?>>
+        <!--[if lt IE 8]>
+        <?php echo do_shortcode("[infobox style='error']It looks like you're using an old version of Internet Explorer. For the best WordPress experience, please <a href=\"http://microsoft.com\">update your browser</a> or learn how to <a href=\"http://browsehappy.com\">browse happy</a>![/infobox]"); ?>
+        <![endif]-->
         <?php
             // User data
             $user_lastname = get_theme_option('user_lastname');
