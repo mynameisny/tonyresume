@@ -152,9 +152,9 @@
                 height: 100%; 
                 background-color: black; 
                 z-index:1001; 
-                -moz-opacity: 0.8; 
-                opacity:.80; 
-                filter: alpha(opacity=88); 
+                -moz-opacity: 0.9; 
+                opacity:.90; 
+                filter: alpha(opacity=98); 
             } 
             .white_content { 
                 display: none; 
