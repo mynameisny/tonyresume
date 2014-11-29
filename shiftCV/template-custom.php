@@ -14,6 +14,33 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
+        <meta charset="<?php bloginfo( 'charset' ); ?>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
+        <link rel="profile" href="http://gmpg.org/xfn/11" />
+        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+        <?php if (($favicon = get_theme_option('favicon'))) { ?>
+            <link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo $favicon; ?>" />
+        <?php
+        }
+        ?>
+        <!--[if lt IE 9]>
+            <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <?php
+        // Theme customizer settings
+        $theme_custom_settings = array(
+            'theme_style' => getValueGPC('theme_style', get_theme_option('theme_style'))
+        );
+        $theme_custom_settings['theme_style'] = !isset($_GET['prn']) && my_strtolower($theme_custom_settings['theme_style']) == 'dark' ? 'dark' : 'light';
+        
+        // AJAX Queries setiings
+        global $ajax_nonce, $ajax_url;
+        $ajax_nonce = wp_create_nonce('ajax_nonce');
+        $ajax_url = admin_url('admin-ajax.php');
+        ?>
+        
+        <?php echo get_theme_option('tracking_code'); ?>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/template/custom.js"></script>
         <style type="text/css">
@@ -174,7 +201,11 @@
             }
             #container
             {
-                overflow:hidden;position:relative;width:1000px;margin:0 auto;padding-bottom:135px;
+                overflow:hidden;
+                position:relative;
+                width:1000px;
+                margin:0 auto;
+                padding-bottom:135px;
             }
             #contentWrapper
             {position:relative;overflow:hidden;width:558px;height:278px;margin:140px auto 0;padding:6px;background-color:#fff;border:1px solid #EEEEEE;box-shadow:1px 1px 2px #C1C1C1;}
@@ -212,9 +243,13 @@
             #addressDetails h3 a {color:#333;}
             #contact{background:url(<?php echo get_template_directory_uri(); ?>/images/vcard/feature-cloud.png) no-repeat right bottom;}
         </style>
+
     </head>
 
-    <body>
+    <body <?php body_class($theme_custom_settings['theme_style']); ?>>
+        <!--[if lt IE 8]>
+        <?php echo do_shortcode("[infobox style='error']It looks like you're using an old version of Internet Explorer. For the best WordPress experience, please <a href=\"http://microsoft.com\">update your browser</a> or learn how to <a href=\"http://browsehappy.com\">browse happy</a>![/infobox]"); ?>
+        <![endif]-->
         <?php
             // User data
             $user_lastname = get_theme_option('user_lastname');
@@ -270,13 +305,13 @@
                                 <a href="http://3333024.qzone.qq.com" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/qq.png" alt="QQ" height="32" width="32"> <strong>QQ</strong>3333024</a>
                             </li>
                             <li>
-                                <a href="<?php echo $rss; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/rss.png" alt="RSS" height="32" width="32"> <strong>RSS</strong><?php echo $rss; ?></a>
+                                <a href="<?php echo $rss; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/rss.png" alt="RSS" height="32" width="32"> <strong>RSS</strong><span><?php if (mb_strlen($rss, 'UTF-8') > 28){echo mb_substr($rss, 0, 28, 'utf-8')."...";}else{echo $rss;} ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo $github; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/github.png" alt="GitHub" height="32" width="32"> <strong>GitHub</strong><?php echo $github; ?></a>
+                                <a href="<?php echo $github; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/github.png" alt="GitHub" height="32" width="32"> <strong>GitHub</strong><?php if (mb_strlen($github, 'UTF-8') > 28){echo mb_substr($github, 0, 28, 'utf-8')."...";}else{echo $github;} ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo $facebook; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/facebook.png" alt="Facebook" height="32" width="32"> <strong>Facebook</strong><?php echo $facebook; ?></a>
+                                <a href="<?php echo $facebook; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/facebook.png" alt="Facebook" height="32" width="32"> <strong>Facebook</strong><?php if (mb_strlen($facebook, 'UTF-8') > 28){echo mb_substr($facebook, 0, 28, 'utf-8')."...";}else{echo $facebook;} ?></a>
                             </li>
                             <li>
                                 <a href="http://www.linkedin.com/pub/%E5%B0%BC-%E6%89%98/92/b50/552" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/linkedin.png" alt="LinkedIn" height="32" width="32"> <strong>LinkedIn</strong>http://www.linkedin.com/pub/..</a>
@@ -288,7 +323,7 @@
                                 <a href="https://secure.skype.com/portal/overview?skypename=live%3Amynameisny_1" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/skype.png" alt="Skype" height="32" width="32"> <strong>Skype</strong>mynameisny@qq.com</a>
                             </li>
                             <li>
-                                <a href="<?php echo $twitter; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/twitter.png" alt="Twitter" height="32" width="32"> <strong>Twitter</strong><?php echo $twitter; ?></a>
+                                <a href="<?php echo $twitter; ?>" class="external"><img src="<?php echo get_template_directory_uri(); ?>/images/vcard/twitter.png" alt="Twitter" height="32" width="32"> <strong>Twitter</strong><?php if (mb_strlen($twitter, 'UTF-8') > 28){echo mb_substr($twitter, 0, 28, 'utf-8')."...";}else{echo $twitter;} ?></a>
                             </li>
                         </ul>
                         <p> You can also find me on <a href="http://code.google.com/u/116603173758864997653/" class="external">Google Code</a> and more.</p>
@@ -322,7 +357,7 @@
 
         <footer>
             <p>
-                <strong>Welcome! </strong> Check out <a target="_blank" href="http://<?php echo $user_website; ?>"><?php echo $user_website; ?></a>, for more information about me! <span class="follow">And you may also <a target="_blank" href="<?php echo $tencent_weibo; ?>">@me</a> on Tencent Microblog.</span>
+                <strong>Welcome! </strong> Check out <a target="_self" href="<?php echo $user_website; ?>"><?php echo $user_website; ?></a>, for more information about me! <span class="follow">And you may also <a target="_blank" href="<?php echo $tencent_weibo; ?>">@me</a> on Tencent Microblog.</span>
             </p>
         </footer>
 

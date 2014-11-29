@@ -91,7 +91,7 @@ global $theme_custom_settings;
 						<?php if ($twitter) { ?><li class="tw"><a target="_blank" href="<?php echo $twitter; ?>"><?php _e('Twitter', 'wpspace'); ?></a></li><?php } ?>
 						<?php if ($tencent_weibo) { ?><li class="tencent_weibo"><a target="_blank" href="<?php echo $tencent_weibo; ?>"><?php _e('Tencent Weibo', 'wpspace'); ?></a></li><?php } ?>
 						<?php if ($sina_weibo) { ?><li class="sina_weibo"><a target="_blank" href="<?php echo $sina_weibo; ?>"><?php _e('Sina Weibo', 'wpspace'); ?></a></li><?php } ?>
-						<?php if ($tencent_weixin) { ?><li class="tencent_weixin"><a target="_blank" href=<?php echo $home; ?>><?php _e('Tencent Weixin', 'wpspace'); ?></a></li><?php } ?>
+						<?php if ($tencent_weixin) { ?><li class="tencent_weixin"><a target="_self" href=<?php echo $home; ?>><?php _e('Tencent Weixin', 'wpspace'); ?></a></li><?php } ?>
 						<!--<?php if ($tencent_weixin) { ?><li class="tencent_weixin"><a target="_blank" href="<?php echo $tencent_weixin; ?>"><?php _e('Tencent Weixin', 'wpspace'); ?></a></li><?php } ?>-->
 						<?php if ($github) { ?><li class="github"><a target="_blank" href="<?php echo $github; ?>"><?php _e('GitHub', 'wpspace'); ?></a></li><?php } ?>
 					</ul>
