@@ -1353,12 +1353,12 @@ h3.category_title .category_title_icon {
 	border-color: #4ca5d0;
 	color: #fff;
 }
-#googlemap_data {
+#baidumap_data {
 	margin-top: 5px;
 	margin-bottom: 30px;
 	position: relative;
 }
-#googlemap_data .add_info {
+#baidumap_data .add_info {
 	border-radius: 2px;
 	position: absolute;
 	width: 190px;
@@ -1367,11 +1367,11 @@ h3.category_title .category_title_icon {
 	background: #fff;
 	padding: 26px 30px 20px;
 }
-#googlemap_data .add_info .profile_row {
+#baidumap_data .add_info .profile_row {
 	overflow: hidden;
 	margin-bottom: 10px;
 }
-#googlemap_data .add_info .profile_row .th {
+#baidumap_data .add_info .profile_row .th {
 	float: left;
 	width: 26px;
 	height: 26px;
@@ -1381,23 +1381,23 @@ h3.category_title .category_title_icon {
 	text-indent:100%;
 	white-space:nowrap;
 }
-#googlemap_data .add_info .profile_row.phone .th {
+#baidumap_data .add_info .profile_row.phone .th {
 	background-position: 0 -36px;
 }
-#googlemap_data .add_info .profile_row.email .th {
+#baidumap_data .add_info .profile_row.email .th {
 	background-position: 0 -72px;
 }
-#googlemap_data .add_info .profile_row.website .th {
+#baidumap_data .add_info .profile_row.website .th {
 	background-position: 0 -108px;
 }
-#googlemap_data .add_info .profile_row .td {
+#baidumap_data .add_info .profile_row .td {
 	display: block;
 	overflow: hidden;
 	font-size: 12px;
 	line-height: 15px;
 	padding-top: 5px;
 }
-#googlemap_data .profile_row.header {
+#baidumap_data .profile_row.header {
 	font-size: 14px;
 	line-height: 17px;
 	text-transform: uppercase;

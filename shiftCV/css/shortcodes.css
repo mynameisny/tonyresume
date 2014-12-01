@@ -772,3 +772,35 @@ div.sc_googlemap .map-canvas {
 	min-height:100px;
 }
 /* ----------- /Google map ------------ */
+
+
+
+
+
+/* ----------- Baidu map ------------ */
+.BMap_cpyCtrl
+{
+	display: none !important;
+}
+#divMap .anchorBL img
+{
+	display: none !important;
+}
+.BMap_scaleHBar
+{
+	height: 2px !important;
+}
+.BMap_scaleLBar
+{
+	width: 1px !important;
+}
+.BMap_scaleRBar
+{
+	width: 1px !important;
+}
+.BMap_scaleCtrl
+{
+	height: 18px !important;
+}
+/* ----------- /Baidu map ------------ */
+

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tonyresume\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-05 15:05+0800\n"
-"PO-Revision-Date: 2014-03-05 15:06+0800\n"
+"POT-Creation-Date: 2014-11-30 02:02+0800\n"
+"PO-Revision-Date: 2014-11-30 02:02+0800\n"
 "Last-Translator: Tony Joseph <mynameisny@qq.com>\n"
 "Language-Team: smiletony.com <mynameisny@qq.com>\n"
 "MIME-Version: 1.0\n"
@@ -40,14 +40,11 @@ msgstr "你的消息"
 
 #: ../shiftCV/comments.php:65
 #: ../shiftCV/template-print.php:57
-#: ../shiftCV/template-resume.php:68
 msgid "Name"
 msgstr "姓名"
 
 #: ../shiftCV/comments.php:67
 #: ../shiftCV/template-print.php:69
-#: ../shiftCV/template-resume.php:80
-#: ../shiftCV/template-resume.php:349
 msgid "Email"
 msgstr "电子邮箱"
 
@@ -191,46 +188,47 @@ msgstr "选择使用这个分类以及嵌套分类应该被显示在独立页面
 msgid "Show sidebar for single posts with this category and nested."
 msgstr "为这个分类以及嵌套分类中的独立页面选择侧边栏"
 
-#: ../shiftCV/header.php:59
 #: ../shiftCV/header.php:60
+#: ../shiftCV/header.php:61
 msgid "Dark"
 msgstr "Dark"
 
-#: ../shiftCV/header.php:59
 #: ../shiftCV/header.php:60
+#: ../shiftCV/header.php:61
 msgid "Light"
 msgstr "Light"
 
-#: ../shiftCV/header.php:59
 #: ../shiftCV/header.php:60
+#: ../shiftCV/header.php:61
 msgid "Version"
 msgstr "Version"
 
-#: ../shiftCV/header.php:83
+#: ../shiftCV/header.php:89
 msgid "RSS"
 msgstr "RSS"
 
-#: ../shiftCV/header.php:84
+#: ../shiftCV/header.php:90
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../shiftCV/header.php:85
+#: ../shiftCV/header.php:91
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../shiftCV/header.php:86
+#: ../shiftCV/header.php:92
 msgid "Tencent Weibo"
 msgstr "腾讯微博"
 
-#: ../shiftCV/header.php:87
+#: ../shiftCV/header.php:93
 msgid "Sina Weibo"
 msgstr "新浪微博"
 
-#: ../shiftCV/header.php:88
+#: ../shiftCV/header.php:94
+#: ../shiftCV/header.php:95
 msgid "Tencent Weixin"
 msgstr "腾讯微信"
 
-#: ../shiftCV/header.php:89
+#: ../shiftCV/header.php:96
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -257,7 +255,6 @@ msgid "Related posts"
 msgstr "相关文章"
 
 #: ../shiftCV/template-blog.php:89
-#: ../shiftCV/template-resume.php:174
 msgid "<span class=\"readmore\">Read more</span>"
 msgstr "<span class=\"readmore\">阅读更多</span>"
 
@@ -282,29 +279,23 @@ msgid "Sorry, but nothing matched your search terms. Please try again with some 
 msgstr "抱歉,没有符合您的搜索条件。请再次尝试一些不同的关键词。"
 
 #: ../shiftCV/template-print.php:60
-#: ../shiftCV/template-resume.php:71
 msgid "Date of birth"
 msgstr "出生日期"
 
 #: ../shiftCV/template-print.php:63
-#: ../shiftCV/template-resume.php:74
-#: ../shiftCV/template-resume.php:343
 msgid "Address"
 msgstr "地址"
 
 #: ../shiftCV/template-print.php:66
-#: ../shiftCV/template-resume.php:77
-#: ../shiftCV/template-resume.php:346
 msgid "Phone"
 msgstr "电话号码"
 
 #: ../shiftCV/template-print.php:72
-#: ../shiftCV/template-resume.php:83
-#: ../shiftCV/template-resume.php:352
 msgid "Website"
 msgstr "网址"
 
 #: ../shiftCV/template-resume.php:29
+#: ../shiftCV/admin/theme-settings.php:289
 msgid "Blog"
 msgstr "Blog"
 
@@ -369,12 +360,12 @@ msgid "Portfolio posts per page"
 msgstr "每个页面的作品文章数"
 
 #: ../shiftCV/admin/theme-settings.php:58
-msgid "Show Google map on contact page"
-msgstr "在“联络我”页面显示谷歌地图"
+msgid "Show Baidu map on contact page"
+msgstr "在“联络我”页面显示百度地图"
 
 #: ../shiftCV/admin/theme-settings.php:59
-msgid "Show Google map in Contact section"
-msgstr "在“联络我”部分显示谷歌地图"
+msgid "Show Baidu map in Contact section"
+msgstr "在“联络我”部分显示百度地图"
 
 #: ../shiftCV/admin/theme-settings.php:65
 msgid "Show Contact form on contact page"

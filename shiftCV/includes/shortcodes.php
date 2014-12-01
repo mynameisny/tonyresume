@@ -802,6 +802,47 @@ function sc_google_map($atts, $content = null) {
 
 
 
+// ---------------------------------- [Baidu maps] ---------------------------------------
+add_shortcode("baidumap", "sc_baidu_map");
+//[baidumap id="unique_id" address="your_address" width="width_in_pixels_or_percent" height="height_in_pixels"]
+function sc_baidu_map($atts, $content = null)
+{
+	extract(shortcode_atts(array(
+		"id" => "sc_baidumap",
+		"width" => "100%",
+		"height" => "170",
+		"address" => ""
+	), $atts));
+
+	$ed = my_substr($width, -1)=='%' ? '%' : 'px';
+	if ((int) $width < 100 && $ed != '%') $width='100%';
+	if ((int) $height < 50) $height='100';
+	$width = (int) str_replace('%', '', $width);
+	$w = $width >= 0 ? 'width:' . $width . $ed . ';' : '';
+	$h = $height >= 0 ? 'height:' . $height . 'px;' : '';
+	$rez = $w . $h;
+	$rez = $rez ? ' style="' . $rez . '"' : '';
+	
+	wp_enqueue_script( 'baidumap', 'http://api.map.baidu.com/api?v=2.0&ak=IWrFiAFFHHorlw3kGOg6bybb', array(), '1.0.0', true );
+	//wp_enqueue_script( 'baidumap', 'http://api.map.baidu.com/api?key=&v=1.1&services=true', array(), '1.0.0', true );
+	wp_enqueue_script( 'baidumap_init', get_template_directory_uri().'/js/baidumap_init.js', array(), '1.0.0', true );
+	return '
+		<div id="' . $id . '"' . $rez . ' class="sc_baidumap"></div>
+	    <script type="text/javascript">
+	    	jQuery(document).ready(function(){
+				baidumap_init(jQuery("#' . $id . '").get(0), "' . $address . '");
+				jQuery("div.BMap_cpyCtrl").hide();
+	    	});
+		</script>
+		
+	';
+}
+// ---------------------------------- [/Baidu maps] ---------------------------------------
+
+
+
+
+
 // ---------------------------------- [Contact form] ---------------------------------------
 
 add_shortcode("contact_form", "sc_contact_form");

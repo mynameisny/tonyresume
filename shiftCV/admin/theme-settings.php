@@ -55,9 +55,9 @@ $theme_options[] = array( "name" => __('Portfolio posts per page',  'wpspace'),
 			"type" => "list",
 			"options" => array(3, 6, 9, 12, 15, 18, 21, 24, 27, 30));
 			
-$theme_options[] = array( "name" => __('Show Google map on contact page', 'wpspace'),
-			"desc" => __('Show Google map in Contact section', 'wpspace'),
-			"id" => $shortname."_"."google_map",
+$theme_options[] = array( "name" => __('Show Baidu map on contact page', 'wpspace'),
+			"desc" => __('Show Baidu map in Contact section', 'wpspace'),
+			"id" => $shortname."_"."baidu_map",
 			"std" => "1",
 			"type" => "radio",
 			"options" => array("1"=>"Yes", "0"=>"No"));

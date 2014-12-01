@@ -332,9 +332,12 @@ $mult = min(2, max(1, get_theme_option("retina_ready")));
 					<h2 class="section_title contact_section_title"><a href="#"><span class="icon icon-envelope-alt"></span><span class="section_name"><?php echo $contacts_title; ?></span></a><span class="section_icon"></span></h2>
 				</div>
 				<div class="section_body contact_section_body">
-					<?php if (get_theme_option('google_map')==1 && trim($user_address)!='') { ?>
-                    <div id="googlemap_data">
-                    	<?php echo do_shortcode('[googlemap address="' . $user_address . '" height="294"]'); ?>
+					<?php 
+					if (get_theme_option('baidu_map') == 1 && trim($user_address) != '') 
+					{
+					?>
+					<div id="baidumap_data">
+                    	<?php echo do_shortcode('[baidumap address="' . $user_address . '" height="294"]'); ?>
                     	<div class="add_info">
 	                        <div class="profile_row header first">
 	                            <?php _e('Contact info', 'wpspace'); ?>
@@ -353,7 +356,9 @@ $mult = min(2, max(1, get_theme_option("retina_ready")));
 	                        </div>
                         </div>
                     </div>
-					<?php } ?>
+					<?php 
+					} 
+					?>
 					<?php if (get_theme_option('contact_form')==1) { ?>
                 	<div class="sidebar contact_sidebar">
 						<?php do_action( 'before_sidebar' ); ?>
